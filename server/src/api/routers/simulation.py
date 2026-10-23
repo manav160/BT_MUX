@@ -44,10 +44,20 @@ class UnpairNodeRequest(BaseModel):
 
 
 class FileTransferRequest(BaseModel):
-    filename: str = Field(..., description="File name (e.g. document.pdf)")
-    size_bytes: int = Field(..., ge=1, description="File size in bytes")
+    filename: Optional[str] = Field(None, description="File name (e.g. document.pdf)")
+    size_bytes: Optional[int] = Field(None, ge=1, description="File size in bytes")
     recipient_ids: List[str] = Field(default_factory=list, description="Target device IDs or ['all']")
-    chunk_size: int = Field(240, ge=20, le=1024, description="Chunk size in bytes")
+    chunk_size: int = Field(4096, ge=20, le=65536, description="Chunk size in bytes")
+    is_demo: bool = Field(False, description="Is simulated demo payload")
+
+
+class AddPeerRequest(BaseModel):
+    name: Optional[str] = Field(None, description="Optional peer name")
+
+
+class FaultInjectionConfig(BaseModel):
+    enabled: bool = Field(..., description="Enable or disable packet/ACK loss simulation")
+    loss_rate: float = Field(0.20, ge=0.0, le=1.0, description="Packet loss probability")
 
 
 @router.get("/status")
@@ -100,6 +110,34 @@ async def unpair_node_from_scheduler(payload: UnpairNodeRequest) -> Dict[str, An
     }
 
 
+@router.post("/add_peer")
+async def add_logical_peer(payload: Optional[AddPeerRequest] = None) -> Dict[str, Any]:
+    """Add a new logical peer to the multiplexer up to 12+ (Section 11)."""
+    peer = engine.add_peer(name=payload.name if payload else None)
+    return {
+        "message": f"Added logical peer '{peer['name']}' ({peer['id']})",
+        "peer": peer,
+        "nodes": engine.get_nodes_snapshot(),
+    }
+
+
+@router.post("/fault_injection")
+async def configure_fault_injection(payload: FaultInjectionConfig) -> Dict[str, Any]:
+    """Toggle simulated packet loss / lost ACKs (Section 6 & 12)."""
+    active = engine.set_fault_injection(payload.enabled, loss_rate=payload.loss_rate)
+    return {
+        "enabled": active,
+        "loss_rate": payload.loss_rate if active else 0.0,
+        "message": f"Fault injection {'ENABLED (loss=' + str(int(payload.loss_rate * 100)) + '%)' if active else 'DISABLED'}",
+    }
+
+
+@router.get("/dedup_cache")
+async def get_dedup_cache_diagnostics() -> Dict[str, Any]:
+    """Retrieve 5-minute delivery history cache stats (Section 8)."""
+    return engine.session_mgr.dedup_cache.get_stats()
+
+
 @router.post("/test_connect")
 async def test_peripheral_connection(payload: PairNodeRequest) -> Dict[str, Any]:
     """Test physical GATT connection to a peripheral and inspect services."""
@@ -112,11 +150,17 @@ async def test_peripheral_connection(payload: PairNodeRequest) -> Dict[str, Any]
 @router.post("/transfer_file")
 async def transfer_file(payload: FileTransferRequest) -> Dict[str, Any]:
     """Start multiplexed file transfer to target peers."""
+    if not engine.is_running:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Simulation is stopped. Please click 'Start Simulation' first.",
+        )
     return await engine.start_file_transfer(
         filename=payload.filename,
         size_bytes=payload.size_bytes,
         recipient_ids=payload.recipient_ids,
         chunk_size=payload.chunk_size,
+        is_demo=payload.is_demo,
     )
 
 

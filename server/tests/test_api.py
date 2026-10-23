@@ -185,7 +185,8 @@ async def test_simulation_controls_and_scan(client: AsyncClient):
     data = res.json()
     assert "active_physical_slots" in data
     assert "nodes" in data
-    assert len(data["nodes"]) >= 10
+    assert len(data["nodes"]) >= 5
+    first_node_id = data["nodes"][0]["id"]
 
     # 2. Dynamic T_slice update (REQ-11)
     res = await client.post("/api/simulation/slice", json={"t_slice_ms": 350})
@@ -193,9 +194,9 @@ async def test_simulation_controls_and_scan(client: AsyncClient):
     assert res.json()["t_slice_ms"] == 350
 
     # 3. Fault injection (REQ-4)
-    res = await client.post("/api/simulation/inject_fault", json={"node_id": "node_08", "fault_type": "degrade"})
+    res = await client.post("/api/simulation/inject_fault", json={"node_id": first_node_id, "fault_type": "degrade"})
     assert res.status_code == 200
-    assert "node_08" in res.json()["degraded_nodes"]
+    assert first_node_id in res.json()["degraded_nodes"]
 
     # 4. Clear faults
     res = await client.post("/api/simulation/clear_faults")

@@ -56,6 +56,9 @@ class TDMScheduler:
         # Currently occupied physical radio slots (bounded by self.n_max)
         self.active_slots: Set[str] = set()
 
+        # Detailed physical slot mapping for Slot 1..N_max (Section 10)
+        self.physical_slots: List[Optional[Dict[str, Any]]] = [None] * self.n_max
+
         # Nodes flagged as degraded due to connection timeout or link failure (REQ-4)
         self.degraded_nodes: Set[str] = set()
 
@@ -70,6 +73,29 @@ class TDMScheduler:
         # Register session manager transport callback if not already configured
         if not self.session_manager._transport_send_fn:
             self.session_manager.set_transport_send_callback(self.transport.send)
+
+    def get_slot_assignments(self) -> List[Dict[str, Any]]:
+        """Return explicit physical slot assignments matching Section 10."""
+        slots = []
+        for i in range(self.n_max):
+            slot_info = self.physical_slots[i] if i < len(self.physical_slots) else None
+            if slot_info and slot_info.get("device_id"):
+                slots.append({
+                    "slot_index": i,
+                    "slot_number": i + 1,
+                    "device_id": slot_info["device_id"],
+                    "state": slot_info.get("state", "CONNECTED"),
+                    "is_active": slot_info.get("state") in ("CONNECTED", "TRANSMITTING", "ACTIVE_PHYSICAL_LINK"),
+                })
+            else:
+                slots.append({
+                    "slot_index": i,
+                    "slot_number": i + 1,
+                    "device_id": None,
+                    "state": "IDLE",
+                    "is_active": False,
+                })
+        return slots
 
     def register_node(self, device_id: str) -> None:
         """Register a logical node into the scheduler's round-robin queue."""
@@ -122,6 +148,7 @@ class TDMScheduler:
             active_devs = list(self.active_slots)
             for dev_id in active_devs:
                 await self._disconnect_node_graceful(dev_id)
+            self.physical_slots = [None] * self.n_max
 
             logger.info("TDMScheduler stopped. All physical radio slots freed.")
 
@@ -142,14 +169,27 @@ class TDMScheduler:
         current_batch = self.node_queue[:batch_size]
         connected_nodes: List[str] = []
 
+        # Populate initial connecting slots (Section 4 & 10)
+        for i in range(self.n_max):
+            if i < len(current_batch):
+                self.physical_slots[i] = {"slot_index": i, "device_id": current_batch[i], "state": "CONNECTING"}
+            else:
+                self.physical_slots[i] = None
+
         # 1. Establish physical links for current batch concurrently with timeout (SRS REQ-1, REQ-4)
         connect_results = await asyncio.gather(
             *(self._connect_node_with_timeout(dev_id) for dev_id in current_batch)
         )
-        for dev_id, connected in zip(current_batch, connect_results):
+        for i, (dev_id, connected) in enumerate(zip(current_batch, connect_results)):
             if connected:
                 connected_nodes.append(dev_id)
                 self.active_slots.add(dev_id)
+                buf = self.session_manager.get_buffer(dev_id)
+                has_work = buf and (buf.queue_depth > 0 or len(buf._in_flight) > 0)
+                state = "TRANSMITTING" if has_work else "CONNECTED"
+                self.physical_slots[i] = {"slot_index": i, "device_id": dev_id, "state": state}
+            else:
+                self.physical_slots[i] = {"slot_index": i, "device_id": dev_id, "state": "FAILED"}
 
         # 2. Run active transmission window for T_slice (SRS REQ-2)
         # Flush pump in SessionManager automatically drains RAM buffers during this window (REQ-8)
@@ -158,8 +198,16 @@ class TDMScheduler:
 
         # 3. Gracefully tear down physical connections concurrently to free slots before next batch (SRS REQ-3)
         # Explicit disconnect prevents BLE controller buffer overrun and HCI error 0x09
+        for i, dev_id in enumerate(connected_nodes):
+            if i < len(self.physical_slots) and self.physical_slots[i]:
+                self.physical_slots[i]["state"] = "DISCONNECTING"
+
         if connected_nodes:
             await asyncio.gather(*(self._disconnect_node_graceful(dev_id) for dev_id in connected_nodes))
+
+        # Clear physical slots prior to next rotation batch (Return to IDLE)
+        for i in range(self.n_max):
+            self.physical_slots[i] = None
 
         # 4. Advance round-robin queue: rotate evaluated batch to the back
         self.node_queue = self.node_queue[batch_size:] + current_batch

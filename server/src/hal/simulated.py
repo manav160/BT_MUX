@@ -38,6 +38,11 @@ class SimulatedTransport(BLETransport):
         ]
         # Transmitted payloads: list of (device_id, bytes)
         self.transmitted_history: List[tuple[str, bytes]] = []
+        # Receiver acceptance tracking for duplicate detection (Section 6)
+        # device_id -> set of accepted chunk keys
+        self.receiver_accepted: Dict[str, Set[str]] = {}
+        # Fault injection rate for lost packets or lost ACKs (Section 6 & 12, disabled by default)
+        self.fault_injection_loss_rate: float = 0.0
 
         # Event callbacks: event_name -> list[callable]
         self._callbacks: Dict[str, List[Callable[..., Any]]] = {
@@ -48,6 +53,14 @@ class SimulatedTransport(BLETransport):
         # Configurable fault injection for testing DEGRADED node handling (REQ-4)
         self.failing_devices: Set[str] = set()
         self._lock: asyncio.Lock = asyncio.Lock()
+
+    def set_fault_injection(self, enabled: bool, loss_rate: float = 0.20) -> None:
+        """Configure simulated packet/ACK loss fault injection (Section 6 & 12)."""
+        self.fault_injection_loss_rate = loss_rate if enabled else 0.0
+
+    def clear_receiver_state(self) -> None:
+        """Reset simulated receivers accepted chunk cache."""
+        self.receiver_accepted.clear()
 
     def get_max_connections(self) -> int:
         """Return host physical radio N_max connection limit (SRS REQ-1)."""

@@ -2132,5 +2132,394 @@
   color: var(--text-primary);
 }
 
+/* Simulated BLE No Hardware Banner (Section 2) */
+.sim-hardware-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(90deg, rgba(167, 139, 250, 0.15) 0%, rgba(56, 189, 248, 0.15) 100%);
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  color: #c4b5fd;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  animation: pulseGlow 3s ease-in-out infinite;
+}
 
+.sim-pulse-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #a78bfa;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #a78bfa;
+  animation: blinkDot 1.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { border-color: rgba(167, 139, 250, 0.35); }
+  50% { border-color: rgba(56, 189, 248, 0.6); }
+}
+
+@keyframes blinkDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* Multicast Recipient Progress (Section 3 & 13) */
+.multicast-tray {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.multicast-tray-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.multicast-peers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.multicast-peer-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.72rem;
+}
+
+.multicast-peer-chip.completed {
+  border-color: rgba(93, 202, 165, 0.4);
+  background: rgba(93, 202, 165, 0.08);
+}
+
+.multicast-peer-name {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.multicast-peer-stat {
+  color: var(--text-secondary);
+  font-size: 0.68rem;
+}
+
+.multicast-peer-stat.done {
+  color: var(--state-active);
+  font-weight: 700;
+}
+
+/* Fault Injection Button */
+.btn-fault {
+  border-color: rgba(245, 158, 11, 0.4);
+  color: #fbbf24;
+}
+
+.btn-fault:hover {
+  background: rgba(245, 158, 11, 0.12);
+}
+
+.btn-fault.active {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  color: #f87171;
+  animation: pulseFault 2s infinite;
+}
+
+@keyframes pulseFault {
+  0%, 100% { box-shadow: 0 0 0 rgba(239, 68, 68, 0); }
+  50% { box-shadow: 0 0 8px rgba(239, 68, 68, 0.4); }
+}
+
+/* Dedup Diagnostics in Drawer (Section 8) */
+.dedup-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  margin-bottom: 14px;
+}
+
+.dedup-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.dedup-mini-metric {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.dedup-mini-metric-title {
+  font-size: 0.66rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.dedup-mini-metric-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+}
+
+.dedup-recent-table {
+  width: 100%;
+  font-size: 0.72rem;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.dedup-recent-table th {
+  text-align: left;
+  padding: 4px 6px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.dedup-recent-table td {
+  padding: 4px 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text-secondary);
+}
+
+/* Radio slot chunk indicator */
+.slot-transfer-info {
+  font-size: 0.72rem;
+  color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 2px 6px;
+  margin-top: 4px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Header Subtitle & Status Details Bar (Section 15) */
+.header-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 3px;
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(93, 202, 165, 0.2));
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.btn-accent:hover {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.35), rgba(93, 202, 165, 0.35));
+  color: #fff;
+}
+
+.sim-status-details-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 8px 16px;
+  margin-bottom: var(--space-md);
+  font-size: 0.76rem;
+}
+
+.status-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-detail-label {
+  color: var(--text-muted);
+}
+
+.status-detail-val {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* =========================================================================
+   BLUETOOTH DEVICE SCANNER & PHYSICAL BLE CONTROLS
+   ========================================================================= */
+
+.scanner-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.guide-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.guide-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.guide-step-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+
+.guide-step-num {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.guide-step-title {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.guide-step-desc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.scanner-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.scanner-toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 14px 0;
+}
+
+.scanner-search-input {
+  flex: 1;
+  min-width: 220px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  outline: none;
+}
+
+.scanner-search-input:focus {
+  border-color: var(--accent-cyan);
+}
+
+.scanner-filter-toggles {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filter-pill-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-pill-btn:hover {
+  border-color: var(--accent-cyan);
+  color: var(--text-primary);
+}
+
+.filter-pill-btn.active {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+}
+
+.filter-info-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.filter-info-banner strong {
+  color: var(--accent-cyan);
+}
+
+.filter-info-btn {
+  background: none;
+  border: none;
+  color: var(--accent-cyan);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.76rem;
+  padding: 0;
+}
+
+.rssi-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+}
+
+.rssi-bar-outer {
+  width: 44px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.rssi-bar-inner {
+  height: 100%;
+  border-radius: 3px;
+}
 

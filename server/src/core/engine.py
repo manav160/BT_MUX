@@ -49,7 +49,7 @@ class SimulationEngine:
     in-memory simulated peripherals and actual physical Bluetooth hardware via Bleak (WinRT).
     """
 
-    def __init__(self, n_nodes: int = 12) -> None:
+    def __init__(self, n_nodes: int = 7) -> None:
         self.n_nodes = n_nodes
         self.session_id = f"SESS_LIVE_{int(time.time())}"
         self.rotation_count = 0
@@ -58,14 +58,14 @@ class SimulationEngine:
         self._telemetry_task: Optional[asyncio.Task] = None
         self._lock = asyncio.Lock()
 
-        # Operational Mode: 'simulated' | 'physical'
-        settings = get_settings()
-        self.mode: str = "physical" if settings.BLE_TRANSPORT in ("winrt", "linux-bluez") else "simulated"
+        # Operational Mode: Always 'simulated' in current demonstration scope
+        self.mode: str = "simulated"
 
-        # Metrics history
+        # Metrics history (initialized clean without hardcoded fake data)
         self.total_chunks_sent = 0
         self.total_chunks_acked = 0
-        self.recent_rtts: List[float] = [18.2, 21.4, 16.9, 24.3, 19.5]
+        self.retry_count = 0
+        self.recent_rtts: List[float] = []
         self.last_benchmark_result: Optional[Dict[str, Any]] = None
         self.latest_csv_content: str = ""
         self.file_transfers: List[Dict[str, Any]] = []
@@ -106,39 +106,99 @@ class SimulationEngine:
     def _bind_transport_callbacks(self) -> None:
         """Attach transmission callback to session manager."""
         async def hal_send_with_ack(device_id: str, data: bytes, chunk_id: str = "") -> None:
-            await self.transport.send(device_id, data)
             self.total_chunks_sent += 1
-            # Record measured RTT
+
+            # Check simulated packet / ACK loss fault injection (Section 6 & 12)
+            loss_rate = getattr(self.transport, "fault_injection_loss_rate", 0.0)
+            if loss_rate > 0.0:
+                import random
+                if random.random() < loss_rate:
+                    self.retry_count += 1
+                    logger.info("SimulationEngine: Injected packet/ACK loss on device '%s' (chunk '%s')", device_id, chunk_id)
+                    await self.session_mgr.on_chunk_nack_or_timeout(device_id, chunk_id)
+                    # Update file transfer retries count
+                    for tx in self.file_transfers:
+                        if tx.get("status") == "TRANSFERRING" and device_id in tx.get("recipients", []):
+                            tx["retries_count"] = tx.get("retries_count", 0) + 1
+                            if "recipient_progress" in tx and device_id in tx["recipient_progress"]:
+                                tx["recipient_progress"][device_id]["retries"] = (
+                                    tx["recipient_progress"][device_id].get("retries", 0) + 1
+                                )
+                            await self._broadcast_event("FILE_TRANSFER_PROGRESS", tx)
+                            break
+
+                    await self._broadcast_event("CHUNK_EVENT", {
+                        "device_id": device_id,
+                        "chunk_id": chunk_id,
+                        "status": "RETRY",
+                        "reason": "SIMULATED_PACKET_LOSS",
+                        "retry_count": self.retry_count,
+                    })
+                    return
+
+            # Transmit through underlying transport
+            await self.transport.send(device_id, data)
+
+            # Record measured simulated RTT
             rtt = round(15.0 + (hash(device_id) % 15) + (time.time() % 5), 1)
             self.recent_rtts.append(rtt)
             if len(self.recent_rtts) > 30:
                 self.recent_rtts.pop(0)
 
+            # Process positive ACK confirmation
+            ack_processed = False
             if chunk_id:
                 if await self.session_mgr.on_chunk_ack_received(device_id, chunk_id):
                     self.total_chunks_acked += 1
+                    ack_processed = True
             else:
                 buf = self.session_mgr.get_buffer(device_id)
                 if buf:
                     for cid in list(buf._in_flight.keys()):
                         if await self.session_mgr.on_chunk_ack_received(device_id, cid):
                             self.total_chunks_acked += 1
+                            ack_processed = True
 
-            # Update any active file transfers matching this transmission
+            # Update active file transfers with per-recipient progress (Section 3 & 13)
             for tx in self.file_transfers:
                 if tx.get("status") == "TRANSFERRING" and device_id in tx.get("recipients", []):
-                    tx["chunks_acked"] = tx.get("chunks_acked", 0) + 1
+                    rec_p = tx.get("recipient_progress", {}).get(device_id)
+                    if rec_p and rec_p.get("status") != "COMPLETED":
+                        rec_p["chunks_acked"] = rec_p.get("chunks_acked", 0) + 1
+                        rec_p["percent"] = min(
+                            100,
+                            int((rec_p["chunks_acked"] / max(1, rec_p["total_chunks"])) * 100)
+                        )
+                        if rec_p["chunks_acked"] >= rec_p["total_chunks"]:
+                            rec_p["status"] = "COMPLETED"
+
+                    # Overall progress
+                    if "recipient_progress" in tx:
+                        tx["chunks_acked"] = sum(p.get("chunks_acked", 0) for p in tx["recipient_progress"].values())
+                    else:
+                        tx["chunks_acked"] = tx.get("chunks_acked", 0) + 1
+
                     elapsed = max(0.05, time.time() - tx.get("started_at", time.time()))
-                    tx["speed_kbps"] = round((tx["chunks_acked"] * tx.get("chunk_size", 240)) / (elapsed * 1024), 1)
-                    if tx["chunks_acked"] >= tx.get("total_chunks", 1):
+                    tx["speed_kbps"] = round((tx["chunks_acked"] * tx.get("chunk_size", 4096)) / (elapsed * 1024), 1)
+
+                    # Mark completed only when all recipients have finished
+                    all_done = False
+                    if "recipient_progress" in tx:
+                        all_done = all(p.get("status") == "COMPLETED" for p in tx["recipient_progress"].values())
+                    elif tx["chunks_acked"] >= tx.get("total_chunks", 1):
+                        all_done = True
+
+                    if all_done:
                         tx["status"] = "COMPLETED"
                         tx["completed_at"] = time.time()
+
                     await self._broadcast_event("FILE_TRANSFER_PROGRESS", tx)
                     break
 
             # Broadcast chunk transmission/ack event
             await self._broadcast_event("CHUNK_EVENT", {
                 "device_id": device_id,
+                "chunk_id": chunk_id,
                 "status": "ACKED",
                 "rtt_ms": rtt,
                 "size_bytes": len(data),
@@ -147,26 +207,57 @@ class SimulationEngine:
         self.session_mgr.set_transport_send_callback(hal_send_with_ack)
 
     def _initialize_nodes_for_mode(self) -> None:
-        """Initialize initial node set."""
+        """Initialize initial virtual peer node set (starts with 7 logical peers, expandable to 12+)."""
         self.node_meta.clear()
         self.scheduler.node_queue.clear()
         self.scheduler.active_slots.clear()
         self.scheduler.degraded_nodes.clear()
 
-        # For simulated mode, populate 12 standard mock nodes
+        # Populate standard virtual file peers (7 initially: node_00 to node_06)
         for i in range(self.n_nodes):
             nid = f"node_{i:02d}"
             self.node_meta[nid] = {
                 "id": nid,
                 "name": f"File Peer {i:02d}",
-                "rssi": -55 - (i * 3 % 30),
-                "rtt": 16.0 + (i * 2.1 % 20),
-                "state": "UNINITIALIZED",
+                "rssi": -55 - (i * 3 % 25),
+                "rtt": None,
+                "state": "IDLE",
                 "queueDepth": 0,
                 "is_physical": False,
             }
             self.scheduler.register_node(nid)
             self.session_mgr.get_or_create_socket(nid)
+
+    def add_peer(self, name: Optional[str] = None) -> Dict[str, Any]:
+        """Support adding logical peers up to 12 or more for scalability demonstrations (Section 11)."""
+        idx = len(self.node_meta)
+        nid = f"node_{idx:02d}"
+        peer_name = name or f"File Peer {idx:02d}"
+        self.node_meta[nid] = {
+            "id": nid,
+            "name": peer_name,
+            "rssi": -55 - (idx * 3 % 30),
+            "rtt": 16.0 + (idx * 2.1 % 20),
+            "state": "PAUSED_QUEUED",
+            "queueDepth": 0,
+            "is_physical": False,
+        }
+        self.scheduler.register_node(nid)
+        self.session_mgr.get_or_create_socket(nid)
+        asyncio.create_task(self._broadcast_event("SOCKET_STATE_CHANGE", {
+            "device_id": nid,
+            "state": "PAUSED_QUEUED",
+        }))
+        asyncio.create_task(self._broadcast_event("TELEMETRY_SNAPSHOT", self.get_telemetry_snapshot()))
+        return self.node_meta[nid]
+
+    def set_fault_injection(self, enabled: bool, loss_rate: float = 0.20) -> bool:
+        """Toggle packet/ACK loss fault injection for demonstrating retries (Section 6 & 12)."""
+        if hasattr(self.transport, "set_fault_injection"):
+            self.transport.set_fault_injection(enabled, loss_rate=loss_rate)
+            asyncio.create_task(self._broadcast_event("TELEMETRY_SNAPSHOT", self.get_telemetry_snapshot()))
+            return enabled
+        return False
 
     async def switch_mode(self, new_mode: str) -> Dict[str, Any]:
         """Switch between 'physical' (Bleak/WinRT) and 'simulated' (Virtual Demo) modes."""
@@ -274,13 +365,14 @@ class SimulationEngine:
         for nid, meta in self.node_meta.items():
             sock = self.session_mgr.get_socket(nid)
             buf = self.session_mgr.get_buffer(nid)
-            state = "UNINITIALIZED"
-            if nid in self.scheduler.degraded_nodes:
+            if not self.is_running:
+                state = "IDLE"
+            elif nid in self.scheduler.degraded_nodes:
                 state = "DEGRADED_RETRY"
-            elif sock:
-                state = sock.physical_state.value
             elif nid in self.scheduler.active_slots:
                 state = "ACTIVE_PHYSICAL_LINK"
+            elif sock and sock.physical_state.value == "CONNECTING":
+                state = "CONNECTING"
             else:
                 state = "PAUSED_QUEUED"
 
@@ -291,104 +383,175 @@ class SimulationEngine:
                 "state": state,
                 "queueDepth": q_depth,
                 "rssi": meta["rssi"],
-                "rtt": meta.get("rtt", 20.0),
-                "is_physical": meta.get("is_physical", False),
+                "rtt": meta.get("rtt"),
+                "is_physical": False,
             })
         return nodes
 
     def get_telemetry_snapshot(self) -> Dict[str, Any]:
-        """Return aggregated telemetry data matching SRS REQ-10."""
+        """Return aggregated telemetry data matching Section 2, 9 & 10."""
         nodes = self.get_nodes_snapshot()
-        active_count = sum(1 for n in nodes if n["state"] == "ACTIVE_PHYSICAL_LINK")
+        active_count = len(self.scheduler.active_slots) if self.is_running else 0
         total_queue = sum(n["queueDepth"] for n in nodes)
-        avg_rtt = round(sum(self.recent_rtts) / len(self.recent_rtts), 1) if self.recent_rtts else 20.0
+        avg_rtt = round(sum(self.recent_rtts) / len(self.recent_rtts), 1) if self.recent_rtts else None
         pdr = round(
-            (self.total_chunks_acked / max(1, self.total_chunks_sent)) * 100, 1
-        ) if self.total_chunks_sent > 0 else 98.4
+            (self.total_chunks_acked / self.total_chunks_sent) * 100, 1
+        ) if self.total_chunks_sent > 0 else None
+
+        total_in_flight = sum(
+            self.session_mgr.get_buffer(nid).in_flight_count
+            for nid in self.node_meta.keys()
+            if self.session_mgr.get_buffer(nid)
+        ) if self.is_running else 0
+        ready_queued = sum(
+            1 for n in nodes if n["state"] in ("PAUSED_QUEUED", "PAUSED")
+        ) if self.is_running else 0
+        failed_count = sum(
+            1 for n in nodes if n["state"] in ("DEGRADED_RETRY", "DEGRADED")
+        )
+
+        # Enrich physical slot assignments for Slot 1..N_max (Section 10 & 11)
+        raw_slots = self.scheduler.get_slot_assignments()
+        enriched_slots = []
+        for slot in raw_slots:
+            dev_id = slot.get("device_id") if self.is_running else None
+            if dev_id and self.is_running:
+                meta = self.node_meta.get(dev_id, {})
+                buf = self.session_mgr.get_buffer(dev_id)
+                tx_filename = None
+                tx_chunk_info = None
+                for tx in self.file_transfers:
+                    if tx.get("status") == "TRANSFERRING" and dev_id in tx.get("recipients", []):
+                        tx_filename = tx.get("filename")
+                        rec_p = tx.get("recipient_progress", {}).get(dev_id, {})
+                        tx_chunk_info = f"Chunk {rec_p.get('chunks_acked', 0)}/{rec_p.get('total_chunks', 1)}"
+                        break
+
+                enriched_slots.append({
+                    "slot_index": slot["slot_index"],
+                    "slot_number": slot["slot_number"],
+                    "device_id": dev_id,
+                    "device_name": meta.get("name", dev_id),
+                    "state": slot["state"],
+                    "is_active": slot["is_active"],
+                    "rssi": meta.get("rssi", -60),
+                    "rtt": meta.get("rtt"),
+                    "queueDepth": buf.queue_depth if buf else 0,
+                    "in_flight": buf.in_flight_count if buf else 0,
+                    "current_transfer": tx_filename,
+                    "current_chunk_info": tx_chunk_info,
+                })
+            else:
+                enriched_slots.append({
+                    "slot_index": slot["slot_index"],
+                    "slot_number": slot["slot_number"],
+                    "device_id": None,
+                    "device_name": "Idle / Available",
+                    "state": "IDLE",
+                    "is_active": False,
+                    "rssi": None,
+                    "rtt": None,
+                    "queueDepth": 0,
+                    "in_flight": 0,
+                    "current_transfer": None,
+                    "current_chunk_info": None,
+                })
 
         return {
-            "mode": self.mode,
-            "transport_name": self.transport_name,
+            "mode": "simulated",
+            "transport_name": "Simulated BLE (Virtual Demo)",
             "active_physical_slots": active_count,
             "max_physical_slots": self.scheduler.n_max,
-            "logical_streams_count": len(nodes),
+            "logical_streams_count": len(nodes) if self.is_running else 0,
+            "configured_nodes_count": len(nodes),
             "total_queue_depth": total_queue,
+            "pending_chunks": total_queue,
+            "in_flight_chunks": total_in_flight,
+            "ready_queued_sessions": ready_queued,
+            "failed_degraded_sessions": failed_count,
             "mean_rtt_ms": avg_rtt,
-            "pdr_percent": min(100.0, pdr),
+            "pdr_percent": pdr,
             "memory_mb": _get_memory_mb(),
             "t_slice_ms": self.scheduler.t_slice_ms,
             "is_running": self.is_running,
             "rotation_count": self.rotation_count,
+            "total_chunks_sent": self.total_chunks_sent,
+            "total_chunks_acked": self.total_chunks_acked,
+            "retry_count": self.retry_count,
+            "fault_injection_active": getattr(self.transport, "fault_injection_loss_rate", 0.0) > 0.0,
+            "slots": enriched_slots,
+            "dedup_cache_stats": self.session_mgr.dedup_cache.get_stats(),
             "nodes": nodes,
         }
 
     async def start(self) -> None:
-        """Start scheduler and background simulation tasks."""
+        """Start scheduler and background simulation tasks on user demand (Section 3)."""
         async with self._lock:
             if self.is_running:
                 return
             self.is_running = True
 
-            # Patch scheduler step_rotation to broadcast events
-            orig_step = self.scheduler.step_rotation
+            # Patch scheduler step_rotation to broadcast events once
+            if not getattr(self.scheduler, "_is_instrumented", False):
+                orig_step = self.scheduler.step_rotation
 
-            async def instrumented_step() -> None:
-                if not self.scheduler.node_queue:
-                    return
-                batch_size = min(self.scheduler.n_max, len(self.scheduler.node_queue))
-                current_batch = self.scheduler.node_queue[:batch_size]
+                async def instrumented_step() -> None:
+                    if not self.scheduler.node_queue:
+                        return
+                    batch_size = min(self.scheduler.n_max, len(self.scheduler.node_queue))
+                    current_batch = self.scheduler.node_queue[:batch_size]
 
-                # Pre-rotation broadcast
-                await self._broadcast_event("SLOT_ROTATION", {
-                    "active_batch": current_batch,
-                    "queued_batch": self.scheduler.node_queue[batch_size:],
-                    "rotation_count": self.rotation_count,
-                    "t_slice_ms": self.scheduler.t_slice_ms,
-                })
+                    # Pre-rotation broadcast
+                    await self._broadcast_event("SLOT_ROTATION", {
+                        "active_batch": current_batch,
+                        "queued_batch": self.scheduler.node_queue[batch_size:],
+                        "rotation_count": self.rotation_count,
+                        "t_slice_ms": self.scheduler.t_slice_ms,
+                    })
 
-                await orig_step()
-                self.rotation_count += 1
+                    await orig_step()
+                    self.rotation_count += 1
 
-                # Update node states after step
-                for nid in self.node_meta.keys():
-                    sock = self.session_mgr.get_socket(nid)
-                    buf = self.session_mgr.get_buffer(nid)
-                    if sock:
-                        state_val = (
-                            "DEGRADED_RETRY" if nid in self.scheduler.degraded_nodes
-                            else sock.physical_state.value
-                        )
-                        await self._broadcast_event("SOCKET_STATE_CHANGE", {
-                            "device_id": nid,
-                            "state": state_val,
-                        })
-                    if buf:
-                        await self._broadcast_event("BUFFER_UPDATE", {
-                            "device_id": nid,
-                            "queue_depth": buf.queue_depth,
-                        })
+                    # Update node states after step
+                    for nid in self.node_meta.keys():
+                        sock = self.session_mgr.get_socket(nid)
+                        buf = self.session_mgr.get_buffer(nid)
+                        if sock:
+                            state_val = (
+                                "DEGRADED_RETRY" if nid in self.scheduler.degraded_nodes
+                                else sock.physical_state.value
+                            )
+                            await self._broadcast_event("SOCKET_STATE_CHANGE", {
+                                "device_id": nid,
+                                "state": state_val,
+                            })
+                        if buf:
+                            await self._broadcast_event("BUFFER_UPDATE", {
+                                "device_id": nid,
+                                "queue_depth": buf.queue_depth,
+                            })
 
-            self.scheduler.step_rotation = instrumented_step
+                self.scheduler.step_rotation = instrumented_step
+                self.scheduler._is_instrumented = True
 
             await self.scheduler.start()
-            self._traffic_task = asyncio.create_task(self._traffic_generator_loop())
             self._telemetry_task = asyncio.create_task(self._telemetry_broadcast_loop())
-            logger.info("SimulationEngine (%s) started successfully.", self.mode)
+            logger.info("SimulationEngine started in Virtual Simulated BLE Mode (7 peers, queues empty).")
+            await self._broadcast_event("TELEMETRY_SNAPSHOT", self.get_telemetry_snapshot())
 
     async def stop(self) -> None:
-        """Stop scheduler and background tasks."""
+        """Stop scheduler and background tasks cleanly."""
         async with self._lock:
             if not self.is_running:
                 return
             self.is_running = False
 
-            if self._traffic_task and not self._traffic_task.done():
-                self._traffic_task.cancel()
             if self._telemetry_task and not self._telemetry_task.done():
                 self._telemetry_task.cancel()
 
             await self.scheduler.stop()
-            logger.info("SimulationEngine stopped.")
+            logger.info("SimulationEngine stopped (all slots freed).")
+            await self._broadcast_event("TELEMETRY_SNAPSHOT", self.get_telemetry_snapshot())
 
     def set_t_slice_ms(self, duration_ms: int) -> None:
         """Dynamically update T_slice duration (SRS REQ-11)."""
@@ -463,6 +626,7 @@ class SimulationEngine:
                 media_id=f"stream_{node_id}",
                 sequence_number=self.total_chunks_sent + i,
                 payload=f"DATA_{node_id}_{time.time()}_{'X'*100}".encode("utf-8"),
+                recipient_id=node_id,
             )
             await buf.enqueue(chunk)
 
@@ -473,14 +637,20 @@ class SimulationEngine:
 
     async def start_file_transfer(
         self,
-        filename: str,
-        size_bytes: int,
-        recipient_ids: List[str],
-        chunk_size: int = 240,
+        filename: Optional[str] = None,
+        size_bytes: Optional[int] = None,
+        recipient_ids: Optional[List[str]] = None,
+        chunk_size: int = 4096,
+        is_demo: bool = False,
     ) -> Dict[str, Any]:
-        """Start multiplexed file transfer to target peers."""
+        """Start multiplexed file transfer to target peers (Sections 3, 4, 5, 13)."""
+        # Default demo payload fallback if none selected (Section 3)
+        actual_filename = filename or "Generated_Demo_Payload.bin"
+        actual_size = size_bytes if (size_bytes and size_bytes > 0) else (100 * 1024)
+        actual_chunk_size = chunk_size if chunk_size and chunk_size > 0 else 4096
+
         valid_recipients = []
-        if "all" in recipient_ids or not recipient_ids:
+        if not recipient_ids or "all" in recipient_ids:
             valid_recipients = list(self.node_meta.keys())
         else:
             valid_recipients = [r for r in recipient_ids if r in self.node_meta]
@@ -488,29 +658,46 @@ class SimulationEngine:
         if not valid_recipients:
             valid_recipients = list(self.node_meta.keys())[:4]
 
-        chunks_per_peer = max(1, math.ceil(size_bytes / chunk_size))
+        chunks_per_peer = max(1, math.ceil(actual_size / actual_chunk_size))
         total_chunks = chunks_per_peer * len(valid_recipients)
         transfer_id = f"tx_{int(time.time() * 1000)}"
 
+        # Independent recipient progress tracking for multicast (Section 3 & 13)
+        recipient_progress = {
+            rid: {
+                "device_id": rid,
+                "name": self.node_meta.get(rid, {}).get("name", rid),
+                "chunks_acked": 0,
+                "total_chunks": chunks_per_peer,
+                "retries": 0,
+                "status": "TRANSFERRING",
+                "percent": 0,
+            }
+            for rid in valid_recipients
+        }
+
         record: Dict[str, Any] = {
             "id": transfer_id,
-            "filename": filename,
-            "size_bytes": size_bytes,
-            "chunk_size": chunk_size,
+            "filename": actual_filename,
+            "size_bytes": actual_size,
+            "chunk_size": actual_chunk_size,
             "chunks_per_recipient": chunks_per_peer,
             "total_chunks": total_chunks,
             "recipients": valid_recipients,
             "recipient_names": [self.node_meta.get(r, {}).get("name", r) for r in valid_recipients],
+            "recipient_progress": recipient_progress,
             "chunks_sent": 0,
             "chunks_acked": 0,
+            "retries_count": 0,
             "status": "TRANSFERRING",
+            "is_demo": is_demo,
             "started_at": time.time(),
             "completed_at": None,
             "speed_kbps": 0.0,
         }
         self.file_transfers.insert(0, record)
 
-        # Enqueue chunks into session buffers for all target recipients
+        # Enqueue real structured Chunk objects into session FIFO buffers (Section 4 & 5)
         for rid in valid_recipients:
             buf = self.session_mgr.get_buffer(rid)
             if buf:
@@ -518,7 +705,8 @@ class SimulationEngine:
                     chk = Chunk.create(
                         media_id=transfer_id,
                         sequence_number=i,
-                        payload=f"PKT:{transfer_id}:{i}:{filename}".encode("utf-8") + b"\x00" * min(chunk_size - 30, 200),
+                        payload=f"PKT:{transfer_id}:{i}:{actual_filename}".encode("utf-8") + b"\x00" * min(actual_chunk_size - 30, 200),
+                        recipient_id=rid,
                     )
                     await buf.enqueue(chk)
                 await self._broadcast_event("BUFFER_UPDATE", {
@@ -526,9 +714,9 @@ class SimulationEngine:
                     "queue_depth": buf.queue_depth,
                 })
 
-        # Ensure scheduler is running so transfer progresses immediately
+        # Section 3: If simulation is stopped, require starting it first
         if not self.is_running:
-            await self.start()
+            raise RuntimeError("Simulation is stopped. Please click 'Start Simulation' first.")
 
         await self._broadcast_event("FILE_TRANSFER_START", record)
         return record
@@ -538,19 +726,38 @@ class SimulationEngine:
         return self.file_transfers[:50]
 
     async def reset(self) -> None:
-        """Reset buffers, telemetry, and fault states."""
+        """Reset buffers, telemetry, scheduler, and fault states cleanly to idle (Section 2 & 14)."""
+        await self.stop()
         self.clear_all_faults()
+        self.is_running = False
+        self.rotation_count = 0
         self.total_chunks_sent = 0
         self.total_chunks_acked = 0
-        for nid in self.node_meta.keys():
+        self.retry_count = 0
+        self.recent_rtts.clear()
+        self.file_transfers.clear()
+        self.session_mgr.dedup_cache.clear()
+        if hasattr(self.transport, "clear_receiver_state"):
+            self.transport.clear_receiver_state()
+
+        for nid in list(self.node_meta.keys()):
             buf = self.session_mgr.get_buffer(nid)
             if buf:
-                buf._queue.clear()
+                while not buf._queue.empty():
+                    try:
+                        buf._queue.get_nowait()
+                    except Exception:
+                        break
                 buf._in_flight.clear()
             sock = self.session_mgr.get_socket(nid)
             if sock:
-                sock.set_physical_state(SocketState.PAUSED_QUEUED)
+                sock.set_physical_state(SocketState.UNINITIALIZED)
 
+        # Reset to 7 default virtual peers in IDLE state per Section 2 & 3
+        self.n_nodes = 7
+        self._initialize_nodes_for_mode()
+        self.scheduler.physical_slots = [None] * self.scheduler.n_max
+        await self._broadcast_event("RESET_EVENT", {})
         await self._broadcast_event("TELEMETRY_SNAPSHOT", self.get_telemetry_snapshot())
 
     async def run_benchmark(
@@ -656,5 +863,5 @@ class SimulationEngine:
             logger.debug("Telemetry loop ended: %s", exc)
 
 
-# Global singleton instance
-engine = SimulationEngine(n_nodes=12)
+# Global singleton instance (starts with 7 virtual logical peers per Section 2 & 3)
+engine = SimulationEngine(n_nodes=7)

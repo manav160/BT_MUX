@@ -33,12 +33,8 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     except Exception as exc:
         logger.warning("MongoDB connection error on startup (service starting degraded): %s", exc)
 
-    # Launch live TDM simulation engine for real-time dashboard IPC
-    try:
-        await engine.start()
-        logger.info("SimulationEngine launched live background TDM rotation.")
-    except Exception as exc:
-        logger.warning("Could not launch SimulationEngine: %s", exc)
+    # Simulation engine starts in a clean, idle state until user explicitly clicks Start Simulation
+    logger.info("SimulationEngine initialized in clean IDLE state (awaiting user Start Simulation).")
 
     yield
 

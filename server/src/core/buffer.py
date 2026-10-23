@@ -62,7 +62,8 @@ class StreamBuffer:
             True if enqueued, False if bypassed as duplicate.
         """
         # Dedup optimization (Section 4.1): avoid re-sending chunks already finished
-        if self.dedup_cache.is_completed(self.device_id, chunk.chunk_id):
+        if self.dedup_cache.is_completed(self.device_id, chunk.chunk_id) or \
+           self.dedup_cache.is_chunk_completed(chunk.transfer_id, chunk.recipient_id or self.device_id, chunk.sequence_number):
             logger.debug(
                 "Bypassing duplicate chunk '%s' for device '%s' (found in dedup cache)",
                 chunk.chunk_id,
@@ -127,31 +128,55 @@ class StreamBuffer:
         Only advance on real confirmation — never mark complete merely on send.
         
         Args:
-            chunk_id: Identifier of acknowledged chunk.
+            chunk_id: Identifier of acknowledged chunk (UUID or compound key).
             
         Returns:
             True if chunk was tracked and acknowledged, False if untracked.
         """
         async with self._lock:
             # Case 1: chunk is in _in_flight
-            chunk = self._in_flight.pop(chunk_id, None)
-            if chunk:
-                chunk.mark_completed()
+            matched_chunk = None
+            if chunk_id in self._in_flight:
+                matched_chunk = self._in_flight.pop(chunk_id)
+            else:
+                for cid, c in list(self._in_flight.items()):
+                    compound = self.dedup_cache.make_key(c.transfer_id, c.recipient_id or self.device_id, c.sequence_number)
+                    if cid == chunk_id or compound == chunk_id:
+                        matched_chunk = self._in_flight.pop(cid)
+                        break
+
+            if matched_chunk:
+                matched_chunk.mark_completed()
                 # Record in delivery history cache (5-minute TTL dedup)
-                self.dedup_cache.mark_completed(self.device_id, chunk_id)
+                self.dedup_cache.mark_completed(self.device_id, matched_chunk.chunk_id)
+                self.dedup_cache.mark_chunk_completed(
+                    matched_chunk.transfer_id,
+                    matched_chunk.recipient_id or self.device_id,
+                    matched_chunk.sequence_number,
+                    matched_chunk.checksum,
+                    matched_chunk.size,
+                )
                 logger.debug(
                     "StreamBuffer[%s]: ACK received for chunk '%s' -> COMPLETED",
                     self.device_id,
-                    chunk_id,
+                    matched_chunk.chunk_id,
                 )
                 return True
 
             # Case 2: chunk is in _queue with state RETRY (late ACK after slot rotation)
             for q_chunk in self._queue._queue:
-                if q_chunk.chunk_id == chunk_id:
+                compound = self.dedup_cache.make_key(q_chunk.transfer_id, q_chunk.recipient_id or self.device_id, q_chunk.sequence_number)
+                if q_chunk.chunk_id == chunk_id or compound == chunk_id:
                     if q_chunk.state == ChunkState.RETRY:
                         q_chunk.mark_completed()
-                        self.dedup_cache.mark_completed(self.device_id, chunk_id)
+                        self.dedup_cache.mark_completed(self.device_id, q_chunk.chunk_id)
+                        self.dedup_cache.mark_chunk_completed(
+                            q_chunk.transfer_id,
+                            q_chunk.recipient_id or self.device_id,
+                            q_chunk.sequence_number,
+                            q_chunk.checksum,
+                            q_chunk.size,
+                        )
                         logger.debug(
                             "StreamBuffer[%s]: Late ACK received for requeued chunk '%s' -> COMPLETED",
                             self.device_id,

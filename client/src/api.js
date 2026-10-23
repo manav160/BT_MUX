@@ -212,3 +212,27 @@ export async function fetchTransfers() {
   return res.json();
 }
 
+export async function addLogicalPeer(name) {
+  const res = await fetch(`${BASE_URL}/simulation/add_peer`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name }),
+  });
+  return res.json();
+}
+
+export async function setFaultInjection(enabled, loss_rate = 0.20) {
+  const res = await fetch(`${BASE_URL}/simulation/fault_injection`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ enabled, loss_rate }),
+  });
+  return res.json();
+}
+
+export async function fetchDedupCache() {
+  const res = await fetch(`${BASE_URL}/simulation/dedup_cache`);
+  return res.json();
+}
+
+
