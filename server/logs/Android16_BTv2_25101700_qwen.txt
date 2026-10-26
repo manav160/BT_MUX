@@ -1,0 +1,185 @@
+nRF Connect, 2026-10-25
+No name (28:39:26:9D:19:5A)
+D	16:58:48.595	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+I	16:58:48.595	[Server] Server started
+V	16:58:48.614	Nordic UART Service (6e400001-b5a3-f393-e0a9-e50e24dcca9e)
+- RX Characteristic [W] (6e400002-b5a3-f393-e0a9-e50e24dcca9e)
+- TX Characteristic [W] (6e400003-b5a3-f393-e0a9-e50e24dcca9e)
+D	16:58:48.661	[Server callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	16:58:48.661	[Server] Device with address 28:39:26:9D:19:5A connected
+I	16:58:48.662	[Server] MTU changed to 517
+V	16:58:48.768	Connecting to 28:39:26:9D:19:5A...
+D	16:58:48.769	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+D	16:58:48.818	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	16:58:48.818	Connected to 28:39:26:9D:19:5A
+D	16:58:48.835	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+V	16:58:48.851	Discovering services...
+D	16:58:48.851	gatt.discoverServices()
+I	16:58:50.209	Connection parameters updated (interval: 7.5ms, latency: 0, timeout: 5000ms)
+D	16:58:50.457	[Callback] Services discovered with status: 0
+I	16:58:50.457	Services discovered
+V	16:58:50.463	Generic Access (0x1800)
+- Device Name [R] (0x2A00)
+- Appearance [R] (0x2A01)
+- Peripheral Preferred Connection Parameters [R] (0x2A04)
+- Central Address Resolution [R] (0x2AA6)
+Generic Attribute (0x1801)
+- Service Changed [I] (0x2A05)
+   Client Characteristic Configuration (0x2902)
+- Client Supported Features [R W] (0x2B29)
+- Database Hash [R] (0x2B2A)
+Device Information (0x180A)
+- PnP ID [R] (0x2A50)
+D	16:58:50.463	gatt.setCharacteristicNotification(00002a05-0000-1000-8000-00805f9b34fb, true)
+I	16:58:50.538	Connection parameters updated (interval: 60.0ms, latency: 0, timeout: 9600ms)
+D	16:58:57.207	[Server callback] Connection state changed with status: 0 and new state: DISCONNECTED (0)
+I	16:58:57.207	[Server] Device disconnected
+D	16:58:57.341	[Callback] Connection state changed with status: 19 and new state: DISCONNECTED (0)
+W	16:58:57.341	Connection terminated by peer (status 19)
+I	16:58:57.341	Disconnected
+D	16:58:57.386	[Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED
+D	16:59:05.848	[Server callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	16:59:05.848	[Server] Device with address 28:39:26:9D:19:5A connected
+D	16:59:05.848	gatt.close()
+D	16:59:05.860	wait(200)
+D	16:59:05.930	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+V	16:59:06.061	Connecting to 28:39:26:9D:19:5A...
+D	16:59:06.063	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+I	16:59:06.073	[Server] MTU changed to 517
+D	16:59:06.089	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	16:59:06.089	Connected to 28:39:26:9D:19:5A
+V	16:59:06.100	Discovering services...
+D	16:59:06.100	gatt.discoverServices()
+D	16:59:06.110	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	16:59:07.676	Connection parameters updated (interval: 7.5ms, latency: 0, timeout: 5000ms)
+D	16:59:08.046	[Callback] Services discovered with status: 0
+I	16:59:08.046	Services discovered
+V	16:59:08.064	Generic Access (0x1800)
+- Device Name [R] (0x2A00)
+- Appearance [R] (0x2A01)
+- Peripheral Preferred Connection Parameters [R] (0x2A04)
+- Central Address Resolution [R] (0x2AA6)
+Generic Attribute (0x1801)
+- Service Changed [I] (0x2A05)
+   Client Characteristic Configuration (0x2902)
+- Client Supported Features [R W] (0x2B29)
+- Database Hash [R] (0x2B2A)
+Device Information (0x180A)
+- PnP ID [R] (0x2A50)
+D	16:59:08.064	gatt.setCharacteristicNotification(00002a05-0000-1000-8000-00805f9b34fb, true)
+I	16:59:08.140	Connection parameters updated (interval: 60.0ms, latency: 0, timeout: 9600ms)
+D	16:59:11.178	[Server callback] Connection state changed with status: 0 and new state: DISCONNECTED (0)
+I	16:59:11.178	[Server] Device disconnected
+D	16:59:11.220	[Callback] Connection state changed with status: 19 and new state: DISCONNECTED (0)
+W	16:59:11.220	Connection terminated by peer (status 19)
+I	16:59:11.220	Disconnected
+D	16:59:11.277	[Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED
+D	16:59:21.284	[Server callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	16:59:21.284	[Server] Device with address 28:39:26:9D:19:5A connected
+D	16:59:21.284	gatt.close()
+D	16:59:21.293	wait(200)
+D	16:59:21.371	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+V	16:59:21.494	Connecting to 28:39:26:9D:19:5A...
+D	16:59:21.496	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+I	16:59:21.504	[Server] MTU changed to 517
+D	16:59:21.519	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	16:59:21.519	Connected to 28:39:26:9D:19:5A
+V	16:59:21.525	Discovering services...
+D	16:59:21.525	gatt.discoverServices()
+D	16:59:21.530	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	16:59:23.696	Connection parameters updated (interval: 7.5ms, latency: 0, timeout: 5000ms)
+D	16:59:24.013	[Callback] Services discovered with status: 0
+I	16:59:24.013	Services discovered
+V	16:59:24.027	Generic Access (0x1800)
+- Device Name [R] (0x2A00)
+- Appearance [R] (0x2A01)
+- Peripheral Preferred Connection Parameters [R] (0x2A04)
+- Central Address Resolution [R] (0x2AA6)
+Generic Attribute (0x1801)
+- Service Changed [I] (0x2A05)
+   Client Characteristic Configuration (0x2902)
+- Client Supported Features [R W] (0x2B29)
+- Database Hash [R] (0x2B2A)
+Device Information (0x180A)
+- PnP ID [R] (0x2A50)
+D	16:59:24.027	gatt.setCharacteristicNotification(00002a05-0000-1000-8000-00805f9b34fb, true)
+I	16:59:24.168	Connection parameters updated (interval: 60.0ms, latency: 0, timeout: 9600ms)
+I	16:59:37.980	[Server] MTU changed to 517
+D	16:59:45.916	[Server callback] Connection state changed with status: 0 and new state: DISCONNECTED (0)
+I	16:59:45.916	[Server] Device disconnected
+D	16:59:45.962	[Callback] Connection state changed with status: 19 and new state: DISCONNECTED (0)
+W	16:59:45.962	Connection terminated by peer (status 19)
+I	16:59:45.962	Disconnected
+D	16:59:46.013	[Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED
+D	16:59:55.415	[Server callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	16:59:55.415	[Server] Device with address 28:39:26:9D:19:5A connected
+D	16:59:55.415	gatt.close()
+D	16:59:55.427	wait(200)
+D	16:59:55.492	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+V	16:59:55.629	Connecting to 28:39:26:9D:19:5A...
+D	16:59:55.630	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+I	16:59:55.636	[Server] MTU changed to 517
+D	16:59:55.650	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	16:59:55.650	Connected to 28:39:26:9D:19:5A
+D	16:59:55.655	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+V	16:59:55.664	Discovering services...
+D	16:59:55.664	gatt.discoverServices()
+I	16:59:56.983	Connection parameters updated (interval: 7.5ms, latency: 0, timeout: 5000ms)
+D	16:59:57.156	[Callback] Services discovered with status: 0
+I	16:59:57.156	Services discovered
+V	16:59:57.159	Generic Access (0x1800)
+- Device Name [R] (0x2A00)
+- Appearance [R] (0x2A01)
+- Peripheral Preferred Connection Parameters [R] (0x2A04)
+- Central Address Resolution [R] (0x2AA6)
+Generic Attribute (0x1801)
+- Service Changed [I] (0x2A05)
+   Client Characteristic Configuration (0x2902)
+- Client Supported Features [R W] (0x2B29)
+- Database Hash [R] (0x2B2A)
+Device Information (0x180A)
+- PnP ID [R] (0x2A50)
+D	16:59:57.160	gatt.setCharacteristicNotification(00002a05-0000-1000-8000-00805f9b34fb, true)
+I	16:59:57.246	Connection parameters updated (interval: 60.0ms, latency: 0, timeout: 9600ms)
+D	17:00:00.242	[Server callback] Connection state changed with status: 0 and new state: DISCONNECTED (0)
+I	17:00:00.242	[Server] Device disconnected
+D	17:00:00.335	[Callback] Connection state changed with status: 19 and new state: DISCONNECTED (0)
+W	17:00:00.335	Connection terminated by peer (status 19)
+I	17:00:00.335	Disconnected
+D	17:00:00.370	[Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED
+D	17:00:05.696	[Server callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	17:00:05.697	[Server] Device with address 28:39:26:9D:19:5A connected
+D	17:00:05.697	gatt.close()
+D	17:00:05.706	wait(200)
+D	17:00:05.775	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+V	17:00:05.911	Connecting to 28:39:26:9D:19:5A...
+D	17:00:05.913	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+I	17:00:05.923	[Server] MTU changed to 517
+D	17:00:05.939	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	17:00:05.939	Connected to 28:39:26:9D:19:5A
+D	17:00:05.959	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+V	17:00:05.962	Discovering services...
+D	17:00:05.962	gatt.discoverServices()
+I	17:00:07.728	Connection parameters updated (interval: 7.5ms, latency: 0, timeout: 5000ms)
+D	17:00:07.934	[Callback] Services discovered with status: 0
+I	17:00:07.934	Services discovered
+V	17:00:07.947	Generic Access (0x1800)
+- Device Name [R] (0x2A00)
+- Appearance [R] (0x2A01)
+- Peripheral Preferred Connection Parameters [R] (0x2A04)
+- Central Address Resolution [R] (0x2AA6)
+Generic Attribute (0x1801)
+- Service Changed [I] (0x2A05)
+   Client Characteristic Configuration (0x2902)
+- Client Supported Features [R W] (0x2B29)
+- Database Hash [R] (0x2B2A)
+Device Information (0x180A)
+- PnP ID [R] (0x2A50)
+D	17:00:07.948	gatt.setCharacteristicNotification(00002a05-0000-1000-8000-00805f9b34fb, true)
+I	17:00:08.027	Connection parameters updated (interval: 60.0ms, latency: 0, timeout: 9600ms)
+D	17:00:11.032	[Server callback] Connection state changed with status: 0 and new state: DISCONNECTED (0)
+I	17:00:11.032	[Server] Device disconnected
+D	17:00:11.093	[Callback] Connection state changed with status: 19 and new state: DISCONNECTED (0)
+W	17:00:11.093	Connection terminated by peer (status 19)
+I	17:00:11.093	Disconnected
+D	17:00:11.131	[Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED

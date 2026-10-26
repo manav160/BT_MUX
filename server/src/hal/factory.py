@@ -11,11 +11,12 @@ from ..config.settings import get_settings
 from .base import BLETransport
 from .bleak_adapter import BleakTransport
 from .simulated import SimulatedTransport
+from ..config.constants import N_MAX_PHYSICAL_DEFAULT
 
 logger = logging.getLogger("btmux.hal.factory")
 
 
-def create_ble_transport(transport_mode: Optional[str] = None) -> BLETransport:
+def create_ble_transport(transport_mode: Optional[str] = None, N_Max: int = N_MAX_PHYSICAL_DEFAULT) -> BLETransport:
     """Create and return a configured BLETransport adapter.
     
     Modes:
@@ -35,7 +36,7 @@ def create_ble_transport(transport_mode: Optional[str] = None) -> BLETransport:
     if mode == "simulated":
         return SimulatedTransport()
     elif mode in ("winrt", "linux-bluez"):
-        return BleakTransport()
+        return BleakTransport(max_connections = N_Max)
     else:
         raise ValueError(
             f"Unknown BLE_TRANSPORT mode: '{mode}'. Expected one of ('simulated', 'winrt', 'linux-bluez')"

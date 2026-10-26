@@ -1,0 +1,411 @@
+========================================================================
+      BT-MUX USER-SPACE BLE VIRTUAL SOCKET MULTIPLEXER
+      PHYSICAL BLE TESTBED VALIDATION & DEMO (OPTION A)
+========================================================================
+[*] Target Logical Nodes (N >= 10): 10
+[*] Physical GATT Slots (N_max):    4
+[*] Time-Division Window (T_slice): 1500 ms
+[*] Payload Chunks Per Node:        5
+------------------------------------------------------------------------
+[+] Initializing Hardware Abstraction Layer (WinRT/BlueZ)...
+[+] Scanning for physical BLE peripherals in radio range...
+[!] Waiting 5 seconds to ensure Android devices are detected...
+
+[+] Found 1 target demo devices.
+Please select the devices you want to connect to:
+  [1] BTv2_P1 | MAC: 5F:D5:18:5E:D3:6F | RSSI: -56 dBm
+
+Enter the numbers of the devices (comma or space separated): 1
+
+[+] Selected 1 devices for this session:
+    -> BTv2_P1 | MAC: 5F:D5:18:5E:D3:6F
+
+------------------------------------------------------------------------
+PAYLOAD CONFIGURATION
+------------------------------------------------------------------------
+Enter file path (or press Enter for default text): test_img.jpeg
+[+] Loaded file: 'test_img.jpeg' (55535 bytes) -> 556 chunks
+[+] Successfully enqueued 556 chunks into user-space RAM FIFOs
+------------------------------------------------------------------------
+
+[+] Starting TDM Scheduler loop across 1 physical nodes...
+[!] NOTE: T_slice=1500ms, Degraded Timeout=5000ms
+
+    [TDM Loop:   2.8s] Active: 0 | Degraded: 0 | Completed: 0/556 | Queued: 556   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:   6.4s] Active: 0 | Degraded: 1 | Completed: 0/556 | Queued: 556
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   6.7s] Active: 1 | Degraded: 0 | Completed: 0/556 | Queued: 555
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   6.8s] Active: 1 | Degraded: 0 | Completed: 1/556 | Queued: 554
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   7.0s] Active: 1 | Degraded: 0 | Completed: 3/556 | Queued: 553
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   7.1s] Active: 1 | Degraded: 0 | Completed: 3/556 | Queued: 552
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   7.2s] Active: 1 | Degraded: 0 | Completed: 4/556 | Queued: 551
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   7.5s] Active: 1 | Degraded: 0 | Completed: 6/556 | Queued: 549
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   7.6s] Active: 1 | Degraded: 0 | Completed: 7/556 | Queued: 549
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   7.7s] Active: 1 | Degraded: 0 | Completed: 7/556 | Queued: 548
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   8.3s] Active: 0 | Degraded: 0 | Completed: 9/556 | Queued: 548
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   8.5s] Active: 1 | Degraded: 0 | Completed: 10/556 | Queued: 546
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   8.9s] Active: 1 | Degraded: 0 | Completed: 11/556 | Queued: 545
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   9.0s] Active: 1 | Degraded: 0 | Completed: 12/556 | Queued: 545
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   9.1s] Active: 1 | Degraded: 0 | Completed: 12/556 | Queued: 544
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   9.3s] Active: 1 | Degraded: 0 | Completed: 14/556 | Queued: 543
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   9.4s] Active: 1 | Degraded: 0 | Completed: 14/556 | Queued: 542
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   9.5s] Active: 1 | Degraded: 0 | Completed: 15/556 | Queued: 541
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:   9.6s] Active: 1 | Degraded: 0 | Completed: 16/556 | Queued: 540
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:  11.1s] Active: 0 | Degraded: 0 | Completed: 18/556 | Queued: 539
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:  11.5s] Active: 1 | Degraded: 0 | Completed: 18/556 | Queued: 538
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:  11.7s] Active: 1 | Degraded: 0 | Completed: 20/556 | Queued: 536
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:  12.0s] Active: 1 | Degraded: 0 | Completed: 20/556 | Queued: 536
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:  12.1s] Active: 1 | Degraded: 0 | Completed: 21/556 | Queued: 535
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:  12.3s] Active: 1 | Degraded: 0 | Completed: 22/556 | Queued: 534
+[DEBUG BLEAK] Scanned characteristics for 5F:D5:18:5E:D3:6F:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:  15.4s] Active: 0 | Degraded: 0 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  19.5s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  23.7s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  27.8s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  31.9s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  36.2s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  40.4s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  44.6s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  48.8s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  53.0s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  57.2s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  61.4s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  65.6s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  69.8s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  74.0s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  78.2s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  82.4s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  86.5s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  90.8s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  94.9s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  99.0s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop: 103.1s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop: 107.3s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop: 111.5s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop: 115.7s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop: 119.9s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop: 124.0s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop: 128.3s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop: 132.5s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   TDMScheduler: Node '5F:D5:18:5E:D3:6F' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792934961]: Device '5F:D5:18:5E:D3:6F' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop: 135.2s] Active: 0 | Degraded: 1 | Completed: 24/556 | Queued: 533   Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\College materials\Sem5\BTP_v2\BT_MUX\server\src\prod_demo.py", line 78, in run_physical_viva_demonstration
+    execution_metrics = await execute_tdm_loop(
+                        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\College materials\Sem5\BTP_v2\BT_MUX\server\src\demo_runner.py", line 50, in execute_tdm_loop
+    await asyncio.sleep(LOOP_WAIT_STEP)
+  File "C:\Program Files\Python312\Lib\asyncio\tasks.py", line 665, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\College materials\Sem5\BTP_v2\BT_MUX\server\src\prod_demo.py", line 99, in <module>
+    ok = asyncio.run(run_physical_viva_demonstration())
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+^C

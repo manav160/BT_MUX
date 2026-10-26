@@ -1,0 +1,24 @@
+# BT-Mux Benchmark Telemetry Summary Export (SRS REQ-13)
+
+Session ID,SESS_PHYSICAL_1792943187
+Test Name,Physical Viva Multi-Peer File Transfer Benchmark
+Time-Slice Window (T_slice ms),2000
+Host Physical Cap (N_max),4
+Session Status,COMPLETED
+Created At,2026-10-25T15:48:33Z
+Started At,N/A
+Ended At,N/A
+
+=== Global Benchmark Metrics ===
+Metric,Value,Target Reference
+Total Packets Sent,21,N/A
+Total Packets Received,14,N/A
+Packet Delivery Ratio (PDR),66.67%,>= 95% at N=10 (SRS 5.1)
+Average Round-Trip Time (RTT ms),45.00 ms,N/A
+Average Handoff Overhead,250.00 ms,<= 300 ms (SRS 5.1)
+
+=== Per-Node Stream Metrics ===
+Node / Device ID,Priority Rank,Socket Status,Average RSSI (dBm),Average RTT (ms)
+77:5E:53:17:02:78,0,PAUSED_QUEUED,N/A,N/A
+60:83:8F:C8:3F:47,0,PAUSED_QUEUED,N/A,N/A
+75:22:0E:CB:46:27,0,PAUSED_QUEUED,N/A,N/A

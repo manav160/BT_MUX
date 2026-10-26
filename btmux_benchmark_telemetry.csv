@@ -1,34 +1,33 @@
-# BT-Mux Benchmark Telemetry Summary Export (SRS REQ-13)
-
-Session ID,SESS_DEMO_1791030306
-Test Name,Viva Multi-Peer File Transfer Benchmark
-Time-Slice Window (T_slice ms),100
-Host Physical Cap (N_max),4
-Session Status,COMPLETED
-Created At,2026-10-03T12:25:06Z
-Started At,N/A
-Ended At,N/A
-
-=== Global Benchmark Metrics ===
-Metric,Value,Target Reference
-Total Packets Sent,60,N/A
-Total Packets Received,60,N/A
-Packet Delivery Ratio (PDR),100.00%,>= 95% at N=10 (SRS 5.1)
-Average Round-Trip Time (RTT ms),18.50 ms,N/A
-Average Handoff Overhead,22.50 ms,<= 300 ms (SRS 5.1)
-
-=== Per-Node Stream Metrics ===
-Node / Device ID,Priority Rank,Socket Status,Average RSSI (dBm),Average RTT (ms)
-PERIPHERAL_00,0,PAUSED_QUEUED,N/A,N/A
-PERIPHERAL_01,0,PAUSED_QUEUED,N/A,N/A
-PERIPHERAL_02,0,PAUSED_QUEUED,N/A,N/A
-PERIPHERAL_03,0,PAUSED_QUEUED,N/A,N/A
-PERIPHERAL_04,0,PAUSED_QUEUED,N/A,N/A
-PERIPHERAL_05,0,PAUSED_QUEUED,N/A,N/A
-PERIPHERAL_06,0,PAUSED_QUEUED,N/A,N/A
-PERIPHERAL_07,0,PAUSED_QUEUED,N/A,N/A
-PERIPHERAL_08,0,PAUSED_QUEUED,N/A,N/A
-PERIPHERAL_09,0,PAUSED_QUEUED,N/A,N/A
-PERIPHERAL_10,0,PAUSED_QUEUED,N/A,N/A
-PERIPHERAL_11,0,PAUSED_QUEUED,N/A,N/A
-
+# BT-Mux Benchmark Telemetry Summary Export (SRS REQ-13)
+
+Session ID,SESS_DEMO_1792919884
+Test Name,Viva Multi-Peer File Transfer Benchmark
+Time-Slice Window (T_slice ms),100
+Host Physical Cap (N_max),4
+Session Status,COMPLETED
+Created At,2026-10-25T09:18:05Z
+Started At,N/A
+Ended At,N/A
+
+=== Global Benchmark Metrics ===
+Metric,Value,Target Reference
+Total Packets Sent,60,N/A
+Total Packets Received,60,N/A
+Packet Delivery Ratio (PDR),100.00%,>= 95% at N=10 (SRS 5.1)
+Average Round-Trip Time (RTT ms),18.50 ms,N/A
+Average Handoff Overhead,22.50 ms,<= 300 ms (SRS 5.1)
+
+=== Per-Node Stream Metrics ===
+Node / Device ID,Priority Rank,Socket Status,Average RSSI (dBm),Average RTT (ms)
+PERIPHERAL_00,0,PAUSED_QUEUED,N/A,N/A
+PERIPHERAL_01,0,PAUSED_QUEUED,N/A,N/A
+PERIPHERAL_02,0,PAUSED_QUEUED,N/A,N/A
+PERIPHERAL_03,0,PAUSED_QUEUED,N/A,N/A
+PERIPHERAL_04,0,PAUSED_QUEUED,N/A,N/A
+PERIPHERAL_05,0,PAUSED_QUEUED,N/A,N/A
+PERIPHERAL_06,0,PAUSED_QUEUED,N/A,N/A
+PERIPHERAL_07,0,PAUSED_QUEUED,N/A,N/A
+PERIPHERAL_08,0,PAUSED_QUEUED,N/A,N/A
+PERIPHERAL_09,0,PAUSED_QUEUED,N/A,N/A
+PERIPHERAL_10,0,PAUSED_QUEUED,N/A,N/A
+PERIPHERAL_11,0,PAUSED_QUEUED,N/A,N/A

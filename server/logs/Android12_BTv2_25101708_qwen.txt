@@ -1,0 +1,95 @@
+nRF Connect, 2026-10-25
+DESKTOP-EP9QI4S (28:39:26:9D:19:5A)
+I	17:07:01.761	[Server] Server started
+D	17:07:01.761	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+V	17:07:01.764	Nordic UART Service (6e400001-b5a3-f393-e0a9-e50e24dcca9e)
+- RX Characteristic [W] (6e400002-b5a3-f393-e0a9-e50e24dcca9e)
+- TX Characteristic [W] (6e400003-b5a3-f393-e0a9-e50e24dcca9e)
+D	17:07:01.769	[Server callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	17:07:01.770	[Server] Device with address 28:39:26:9D:19:5A connected
+I	17:07:01.770	[Server] MTU changed to 517
+V	17:07:01.845	Connecting to 28:39:26:9D:19:5A...
+D	17:07:01.845	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+D	17:07:01.860	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	17:07:01.860	Connected to 28:39:26:9D:19:5A
+D	17:07:01.860	wait(1600ms)
+V	17:07:03.463	Discovering services...
+D	17:07:03.463	gatt.discoverServices()
+D	17:07:03.476	[Callback] Services discovered with status: 0
+I	17:07:03.476	Services discovered
+V	17:07:03.487	Generic Access (0x1800)
+- Device Name [R] (0x2A00)
+- Appearance [R] (0x2A01)
+- Peripheral Preferred Connection Parameters [R] (0x2A04)
+- Central Address Resolution [R] (0x2AA6)
+Generic Attribute (0x1801)
+- Service Changed [I] (0x2A05)
+   Client Characteristic Configuration (0x2902)
+- Client Supported Features [R W] (0x2B29)
+- Database Hash [R] (0x2B2A)
+Device Information (0x180A)
+- PnP ID [R] (0x2A50)
+D	17:07:03.487	gatt.setCharacteristicNotification(00002a05-0000-1000-8000-00805f9b34fb, true)
+D	17:07:07.418	[Server callback] Connection state changed with status: 0 and new state: DISCONNECTED (0)
+I	17:07:07.418	[Server] Device disconnected
+D	17:07:07.426	[Callback] Connection state changed with status: 0 and new state: DISCONNECTED (0)
+I	17:07:07.426	Disconnected
+D	17:07:07.446	[Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED
+D	17:07:11.801	[Server callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	17:07:11.802	[Server] Device with address 28:39:26:9D:19:5A connected
+D	17:07:11.802	gatt.close()
+D	17:07:11.805	wait(200)
+D	17:07:11.812	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+V	17:07:12.005	Connecting to 28:39:26:9D:19:5A...
+D	17:07:12.007	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+I	17:07:12.014	[Server] MTU changed to 517
+D	17:07:12.029	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	17:07:12.029	Connected to 28:39:26:9D:19:5A
+D	17:07:12.029	wait(1600ms)
+V	17:07:13.630	Discovering services...
+D	17:07:13.630	gatt.discoverServices()
+D	17:07:13.640	[Callback] Services discovered with status: 0
+I	17:07:13.641	Services discovered
+V	17:07:13.653	Generic Access (0x1800)
+- Device Name [R] (0x2A00)
+- Appearance [R] (0x2A01)
+- Peripheral Preferred Connection Parameters [R] (0x2A04)
+- Central Address Resolution [R] (0x2AA6)
+Generic Attribute (0x1801)
+- Service Changed [I] (0x2A05)
+   Client Characteristic Configuration (0x2902)
+- Client Supported Features [R W] (0x2B29)
+- Database Hash [R] (0x2B2A)
+Device Information (0x180A)
+- PnP ID [R] (0x2A50)
+D	17:07:13.653	gatt.setCharacteristicNotification(00002a05-0000-1000-8000-00805f9b34fb, true)
+D	17:07:16.533	[Server callback] Write request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e (requestId=6, prepareWrite=false, responseNeeded=true, offset=0, value=0x564956415F303A39335F30)
+I	17:07:16.534	[Server] WRITE REQUEST request for characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e received, value: (0x) 56-49-56-41-5F-30-3A-39-33-5F-30, "VIVA_0:93_0"
+A	17:07:16.534	[Server] "VIVA_0:93_0" received
+D	17:07:16.534	server.sendResponse(GATT_SUCCESS, offset=0, value=null)
+V	17:07:16.538	[Server] Response sent
+D	17:07:16.651	[Server callback] Write request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e (requestId=7, prepareWrite=false, responseNeeded=true, offset=0, value=0x564956415F303A39335F31)
+I	17:07:16.652	[Server] WRITE REQUEST request for characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e received, value: (0x) 56-49-56-41-5F-30-3A-39-33-5F-31, "VIVA_0:93_1"
+A	17:07:16.652	[Server] "VIVA_0:93_1" received
+D	17:07:16.652	server.sendResponse(GATT_SUCCESS, offset=0, value=null)
+V	17:07:16.654	[Server] Response sent
+D	17:07:16.831	[Server callback] Write request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e (requestId=8, prepareWrite=false, responseNeeded=true, offset=0, value=0x564956415F303A39335F32)
+I	17:07:16.832	[Server] WRITE REQUEST request for characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e received, value: (0x) 56-49-56-41-5F-30-3A-39-33-5F-32, "VIVA_0:93_2"
+A	17:07:16.832	[Server] "VIVA_0:93_2" received
+D	17:07:16.832	server.sendResponse(GATT_SUCCESS, offset=0, value=null)
+V	17:07:16.835	[Server] Response sent
+D	17:07:16.953	[Server callback] Write request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e (requestId=9, prepareWrite=false, responseNeeded=true, offset=0, value=0x564956415F303A39335F33)
+I	17:07:16.953	[Server] WRITE REQUEST request for characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e received, value: (0x) 56-49-56-41-5F-30-3A-39-33-5F-33, "VIVA_0:93_3"
+A	17:07:16.953	[Server] "VIVA_0:93_3" received
+D	17:07:16.953	server.sendResponse(GATT_SUCCESS, offset=0, value=null)
+V	17:07:16.956	[Server] Response sent
+D	17:07:17.432	[Server callback] Write request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e (requestId=10, prepareWrite=false, responseNeeded=true, offset=0, value=0x564956415F303A39335F34)
+I	17:07:17.432	[Server] WRITE REQUEST request for characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e received, value: (0x) 56-49-56-41-5F-30-3A-39-33-5F-34, "VIVA_0:93_4"
+A	17:07:17.432	[Server] "VIVA_0:93_4" received
+D	17:07:17.432	server.sendResponse(GATT_SUCCESS, offset=0, value=null)
+V	17:07:17.435	[Server] Response sent
+D	17:08:02.025	[Server callback] Connection state changed with status: 0 and new state: DISCONNECTED (0)
+I	17:08:02.025	[Server] Device disconnected
+D	17:08:02.039	[Callback] Connection state changed with status: 0 and new state: DISCONNECTED (0)
+I	17:08:02.039	Disconnected
+D	17:08:02.111	[Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED

@@ -1,0 +1,65 @@
+nRF Connect, 2026-10-25
+No name (28:39:26:9D:19:5A)
+I	17:07:01.831	[Server] Server started
+D	17:07:01.831	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+V	17:07:01.844	Nordic UART Service (6e400001-b5a3-f393-e0a9-e50e24dcca9e)
+- RX Characteristic [W] (6e400002-b5a3-f393-e0a9-e50e24dcca9e)
+- TX Characteristic [W] (6e400003-b5a3-f393-e0a9-e50e24dcca9e)
+D	17:07:01.868	[Server callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	17:07:01.868	[Server] Device with address 28:39:26:9D:19:5A connected
+I	17:07:01.869	[Server] MTU changed to 517
+V	17:07:02.085	Connecting to 28:39:26:9D:19:5A...
+D	17:07:02.086	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+D	17:07:02.176	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	17:07:02.176	Connected to 28:39:26:9D:19:5A
+D	17:07:02.192	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+V	17:07:02.203	Discovering services...
+D	17:07:02.203	gatt.discoverServices()
+I	17:07:03.208	Connection parameters updated (interval: 7.5ms, latency: 0, timeout: 5000ms)
+D	17:07:03.419	[Callback] Services discovered with status: 0
+I	17:07:03.419	Services discovered
+V	17:07:03.422	Generic Access (0x1800)
+- Device Name [R] (0x2A00)
+- Appearance [R] (0x2A01)
+- Peripheral Preferred Connection Parameters [R] (0x2A04)
+- Central Address Resolution [R] (0x2AA6)
+Generic Attribute (0x1801)
+- Service Changed [I] (0x2A05)
+   Client Characteristic Configuration (0x2902)
+- Client Supported Features [R W] (0x2B29)
+- Database Hash [R] (0x2B2A)
+Device Information (0x180A)
+- PnP ID [R] (0x2A50)
+D	17:07:03.422	gatt.setCharacteristicNotification(00002a05-0000-1000-8000-00805f9b34fb, true)
+I	17:07:03.564	Connection parameters updated (interval: 60.0ms, latency: 0, timeout: 9600ms)
+D	17:07:18.138	[Server callback] Write request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e (requestId=6, prepareWrite=false, responseNeeded=true, offset=0, value=0x564956415F313A45455F30)
+I	17:07:18.139	[Server] WRITE REQUEST request for characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e received, value: (0x) 56-49-56-41-5F-31-3A-45-45-5F-30, "VIVA_1:EE_0"
+A	17:07:18.139	[Server] "VIVA_1:EE_0" received
+D	17:07:18.139	server.sendResponse(GATT_SUCCESS, offset=0, value=null)
+V	17:07:18.145	[Server] Response sent
+D	17:07:18.324	[Server callback] Write request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e (requestId=7, prepareWrite=false, responseNeeded=true, offset=0, value=0x564956415F313A45455F31)
+I	17:07:18.324	[Server] WRITE REQUEST request for characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e received, value: (0x) 56-49-56-41-5F-31-3A-45-45-5F-31, "VIVA_1:EE_1"
+A	17:07:18.324	[Server] "VIVA_1:EE_1" received
+D	17:07:18.324	server.sendResponse(GATT_SUCCESS, offset=0, value=null)
+V	17:07:18.329	[Server] Response sent
+D	17:07:18.560	[Server callback] Write request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e (requestId=8, prepareWrite=false, responseNeeded=true, offset=0, value=0x564956415F313A45455F32)
+I	17:07:18.560	[Server] WRITE REQUEST request for characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e received, value: (0x) 56-49-56-41-5F-31-3A-45-45-5F-32, "VIVA_1:EE_2"
+A	17:07:18.560	[Server] "VIVA_1:EE_2" received
+D	17:07:18.560	server.sendResponse(GATT_SUCCESS, offset=0, value=null)
+V	17:07:18.566	[Server] Response sent
+D	17:07:18.858	[Server callback] Write request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e (requestId=9, prepareWrite=false, responseNeeded=true, offset=0, value=0x564956415F313A45455F33)
+I	17:07:18.858	[Server] WRITE REQUEST request for characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e received, value: (0x) 56-49-56-41-5F-31-3A-45-45-5F-33, "VIVA_1:EE_3"
+A	17:07:18.858	[Server] "VIVA_1:EE_3" received
+D	17:07:18.858	server.sendResponse(GATT_SUCCESS, offset=0, value=null)
+V	17:07:18.864	[Server] Response sent
+D	17:07:19.097	[Server callback] Write request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e (requestId=10, prepareWrite=false, responseNeeded=true, offset=0, value=0x564956415F313A45455F34)
+I	17:07:19.098	[Server] WRITE REQUEST request for characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e received, value: (0x) 56-49-56-41-5F-31-3A-45-45-5F-34, "VIVA_1:EE_4"
+A	17:07:19.098	[Server] "VIVA_1:EE_4" received
+D	17:07:19.098	server.sendResponse(GATT_SUCCESS, offset=0, value=null)
+V	17:07:19.101	[Server] Response sent
+D	17:07:22.510	[Server callback] Connection state changed with status: 0 and new state: DISCONNECTED (0)
+I	17:07:22.510	[Server] Device disconnected
+D	17:07:22.543	[Callback] Connection state changed with status: 19 and new state: DISCONNECTED (0)
+W	17:07:22.543	Connection terminated by peer (status 19)
+I	17:07:22.543	Disconnected
+D	17:07:22.583	[Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED

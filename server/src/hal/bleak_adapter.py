@@ -42,7 +42,8 @@ class BleakTransport(BLETransport):
             "connected": [],
             "disconnected": [],
         }
-        self.ambient_fallback: bool = True
+        # self.ambient_fallback: bool = True
+        self.ambient_fallback: bool = False
         self._lock: asyncio.Lock = asyncio.Lock()
 
     def get_max_connections(self) -> int:
@@ -64,7 +65,8 @@ class BleakTransport(BLETransport):
         logger.info("Connecting BleakClient to '%s'...", device_id)
         try:
             # 0.5s timeout for fast connection attempts without stalling TDM slots
-            await asyncio.wait_for(client.connect(), timeout=0.5)
+            # await asyncio.wait_for(client.connect(), timeout=0.5)
+            await asyncio.wait_for(client.connect(), timeout=3)
             self._clients[device_id] = client
 
             # Subscribe to RX notifications if characteristic is supported
@@ -123,6 +125,14 @@ class BleakTransport(BLETransport):
                     break
         except Exception:
             pass
+
+    # --- DEBUG PRINTS START ---
+        print(f"\n[DEBUG BLEAK] Scanned characteristics for {device_id}:")
+        for service in client.services:
+            for char in service.characteristics:
+                print(f"  -> UUID: {char.uuid} | Properties: {char.properties}")
+        print(f"[DEBUG BLEAK] Target char selected: {target_char}")
+        # --- DEBUG PRINTS END ---
 
 
         if target_char:

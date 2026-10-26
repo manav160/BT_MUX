@@ -1,0 +1,178 @@
+========================================================================
+      BT-MUX USER-SPACE BLE VIRTUAL SOCKET MULTIPLEXER
+      PHYSICAL BLE TESTBED VALIDATION & DEMO (OPTION A)
+========================================================================
+[*] Target Logical Nodes (N >= 10): 10
+[*] Physical GATT Slots (N_max):    4
+[*] Time-Division Window (T_slice): 2000 ms
+[*] Payload Chunks Per Node:        5
+------------------------------------------------------------------------
+[+] Initializing Hardware Abstraction Layer (WinRT/BlueZ)...
+[+] Scanning for physical BLE peripherals in radio range...
+[!] Waiting 5 seconds to ensure Android devices are detected...
+[!] Waiting 5 seconds to ensure Android devices are detected...
+
+[+] Found 1 target demo devices.
+Please select the devices you want to connect to:
+  [1] BTv2_P1 | MAC: 5E:22:A7:F9:4D:46 | RSSI: -50 dBm
+
+Enter the numbers of the devices (comma or space separated): 1
+
+[+] Selected 1 devices for this session:
+    -> BTv2_P1 | MAC: 5E:22:A7:F9:4D:46
+
+------------------------------------------------------------------------
+PAYLOAD CONFIGURATION
+------------------------------------------------------------------------
+Enter file path (or press Enter for default text): test_img.jpeg
+[+] Loaded file: 'test_img.jpeg' (55535 bytes) -> 2777 chunks
+[+] Successfully enqueued 2777 chunks into user-space RAM FIFOs
+------------------------------------------------------------------------
+
+[+] Starting TDM Scheduler loop across 1 physical nodes...
+[!] NOTE: T_slice=2000ms, Degraded Timeout=9000ms
+
+    [TDM Loop:   5.0s] Active: 0 | Degraded: 0 | Completed: 0/2777 | Queued: 2777   TDMScheduler: Node '5E:22:A7:F9:4D:46' failed link establishment within 9000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792955884]: Device '5E:22:A7:F9:4D:46' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  12.0s] Active: 0 | Degraded: 1 | Completed: 0/2777 | Queued: 2777   TDMScheduler: Node '5E:22:A7:F9:4D:46' failed link establishment within 9000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792955884]: Device '5E:22:A7:F9:4D:46' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  17.0s] Active: 0 | Degraded: 1 | Completed: 0/2777 | Queued: 2777   TDMScheduler: Node '5E:22:A7:F9:4D:46' failed link establishment within 9000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792955884]: Device '5E:22:A7:F9:4D:46' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  22.0s] Active: 0 | Degraded: 1 | Completed: 0/2777 | Queued: 2777   TDMScheduler: Node '5E:22:A7:F9:4D:46' failed link establishment within 9000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792955884]: Device '5E:22:A7:F9:4D:46' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  27.5s] Active: 0 | Degraded: 1 | Completed: 0/2777 | Queued: 2777   TDMScheduler: Node '5E:22:A7:F9:4D:46' failed link establishment within 9000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792955884]: Device '5E:22:A7:F9:4D:46' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  32.5s] Active: 0 | Degraded: 1 | Completed: 0/2777 | Queued: 2777   TDMScheduler: Node '5E:22:A7:F9:4D:46' failed link establishment within 9000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792955884]: Device '5E:22:A7:F9:4D:46' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  38.5s] Active: 0 | Degraded: 1 | Completed: 0/2777 | Queued: 2777   TDMScheduler: Node '5E:22:A7:F9:4D:46' failed link establishment within 9000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792955884]: Device '5E:22:A7:F9:4D:46' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  42.0s] Active: 0 | Degraded: 1 | Completed: 0/2777 | Queued: 2777
+[DEBUG BLEAK] Scanned characteristics for 5E:22:A7:F9:4D:46:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:  42.5s] Active: 1 | Degraded: 0 | Completed: 1/2777 | Queued: 2776
+[DEBUG BLEAK] Scanned characteristics for 5E:22:A7:F9:4D:46:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+
+[DEBUG BLEAK] Scanned characteristics for 5E:22:A7:F9:4D:46:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+
+[DEBUG BLEAK] Scanned characteristics for 5E:22:A7:F9:4D:46:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:  43.0s] Active: 1 | Degraded: 0 | Completed: 3/2777 | Queued: 2773
+[DEBUG BLEAK] Scanned characteristics for 5E:22:A7:F9:4D:46:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:  43.5s] Active: 1 | Degraded: 0 | Completed: 4/2777 | Queued: 2772
+[DEBUG BLEAK] Scanned characteristics for 5E:22:A7:F9:4D:46:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:  44.0s] Active: 1 | Degraded: 0 | Completed: 6/2777 | Queued: 2771
+[DEBUG BLEAK] Scanned characteristics for 5E:22:A7:F9:4D:46:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+
+[DEBUG BLEAK] Scanned characteristics for 5E:22:A7:F9:4D:46:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:  47.0s] Active: 0 | Degraded: 0 | Completed: 8/2777 | Queued: 2770   TDMScheduler: Node '5E:22:A7:F9:4D:46' failed link establishment within 9000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792955884]: Device '5E:22:A7:F9:4D:46' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  54.5s] Active: 0 | Degraded: 1 | Completed: 8/2777 | Queued: 2770   TDMScheduler: Node '5E:22:A7:F9:4D:46' failed link establishment within 9000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792955884]: Device '5E:22:A7:F9:4D:46' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  57.5s] Active: 0 | Degraded: 1 | Completed: 8/2777 | Queued: 2770   Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\College materials\Sem5\BTP_v2\BT_MUX\server\src\prod_demo.py", line 81, in run_physical_viva_demonstration
+    execution_metrics = await execute_tdm_loop(
+                        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\College materials\Sem5\BTP_v2\BT_MUX\server\src\demo_runner.py", line 57, in execute_tdm_loop
+    await asyncio.sleep(LOOP_WAIT_STEP)
+  File "C:\Program Files\Python312\Lib\asyncio\tasks.py", line 665, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\College materials\Sem5\BTP_v2\BT_MUX\server\src\prod_demo.py", line 127, in <module>
+    ok = asyncio.run(run_physical_viva_demonstration())
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+^C

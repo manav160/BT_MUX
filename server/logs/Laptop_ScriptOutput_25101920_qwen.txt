@@ -1,0 +1,981 @@
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  82.2s] Active: 0 | Degraded: 1 | Completed: 281/5554 | Queued: 5278
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  82.3s] Active: 0 | Degraded: 1 | Completed: 282/5554 | Queued: 5277
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  82.4s] Active: 0 | Degraded: 1 | Completed: 283/5554 | Queued: 5276
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  82.5s] Active: 0 | Degraded: 1 | Completed: 284/5554 | Queued: 5275
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  82.7s] Active: 0 | Degraded: 1 | Completed: 285/5554 | Queued: 5274
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  83.0s] Active: 0 | Degraded: 1 | Completed: 286/5554 | Queued: 5273
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  83.2s] Active: 0 | Degraded: 1 | Completed: 287/5554 | Queued: 5272
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  83.3s] Active: 0 | Degraded: 1 | Completed: 288/5554 | Queued: 5271   TDMScheduler: Node '5B:7D:58:75:8B:25' failed link establishment within 50000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792935827]: Device '5B:7D:58:75:8B:25' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  83.4s] Active: 1 | Degraded: 1 | Completed: 288/5554 | Queued: 5271
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  83.5s] Active: 1 | Degraded: 1 | Completed: 289/5554 | Queued: 5270
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  83.6s] Active: 1 | Degraded: 1 | Completed: 290/5554 | Queued: 5269
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  83.7s] Active: 1 | Degraded: 1 | Completed: 291/5554 | Queued: 5268
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  83.8s] Active: 1 | Degraded: 1 | Completed: 292/5554 | Queued: 5267
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  83.9s] Active: 1 | Degraded: 1 | Completed: 293/5554 | Queued: 5266
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  84.0s] Active: 1 | Degraded: 1 | Completed: 294/5554 | Queued: 5265
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  84.2s] Active: 1 | Degraded: 1 | Completed: 296/5554 | Queued: 5263
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  84.3s] Active: 1 | Degraded: 1 | Completed: 296/5554 | Queued: 5263
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  84.5s] Active: 1 | Degraded: 1 | Completed: 298/5554 | Queued: 5261
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  84.6s] Active: 1 | Degraded: 1 | Completed: 298/5554 | Queued: 5261
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  84.7s] Active: 1 | Degraded: 1 | Completed: 299/5554 | Queued: 5260
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  84.8s] Active: 1 | Degraded: 1 | Completed: 300/5554 | Queued: 5259
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  85.0s] Active: 1 | Degraded: 1 | Completed: 301/5554 | Queued: 5258
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  85.1s] Active: 1 | Degraded: 1 | Completed: 302/5554 | Queued: 5257
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  88.0s] Active: 0 | Degraded: 1 | Completed: 304/5554 | Queued: 5257   TDMScheduler: Node '5B:7D:58:75:8B:25' failed link establishment within 50000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792935827]: Device '5B:7D:58:75:8B:25' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '50:F0:C1:96:A2:D6' failed link establishment within 50000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792935827]: Device '50:F0:C1:96:A2:D6' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  92.7s] Active: 0 | Degraded: 2 | Completed: 304/5554 | Queued: 5257   TDMScheduler: Node '5B:7D:58:75:8B:25' failed link establishment within 50000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792935827]: Device '5B:7D:58:75:8B:25' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  94.2s] Active: 0 | Degraded: 2 | Completed: 304/5554 | Queued: 5257   TDMScheduler: Node '50:F0:C1:96:A2:D6' failed link establishment within 50000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792935827]: Device '50:F0:C1:96:A2:D6' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  97.3s] Active: 0 | Degraded: 2 | Completed: 304/5554 | Queued: 5257
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  97.5s] Active: 0 | Degraded: 1 | Completed: 305/5554 | Queued: 5255
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  97.6s] Active: 0 | Degraded: 1 | Completed: 306/5554 | Queued: 5255
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  97.7s] Active: 0 | Degraded: 1 | Completed: 306/5554 | Queued: 5254
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  97.9s] Active: 0 | Degraded: 1 | Completed: 308/5554 | Queued: 5253
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  98.0s] Active: 0 | Degraded: 1 | Completed: 308/5554 | Queued: 5252
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  98.1s] Active: 0 | Degraded: 1 | Completed: 309/5554 | Queued: 5251
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  98.2s] Active: 0 | Degraded: 1 | Completed: 310/5554 | Queued: 5250
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  98.3s] Active: 0 | Degraded: 1 | Completed: 311/5554 | Queued: 5249
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  98.5s] Active: 0 | Degraded: 1 | Completed: 312/5554 | Queued: 5248
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  98.6s] Active: 0 | Degraded: 1 | Completed: 313/5554 | Queued: 5247
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  98.7s] Active: 0 | Degraded: 1 | Completed: 314/5554 | Queued: 5246
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  98.9s] Active: 0 | Degraded: 1 | Completed: 316/5554 | Queued: 5245
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+TDMScheduler: Node '5B:7D:58:75:8B:25' failed link establishment within 50000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792935827]: Device '5B:7D:58:75:8B:25' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  99.0s] Active: 1 | Degraded: 1 | Completed: 316/5554 | Queued: 5244
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  99.1s] Active: 1 | Degraded: 1 | Completed: 317/5554 | Queued: 5243
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  99.2s] Active: 1 | Degraded: 1 | Completed: 318/5554 | Queued: 5242
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  99.4s] Active: 1 | Degraded: 1 | Completed: 319/5554 | Queued: 5241
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  99.5s] Active: 1 | Degraded: 1 | Completed: 320/5554 | Queued: 5240
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  99.6s] Active: 1 | Degraded: 1 | Completed: 321/5554 | Queued: 5239
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  99.7s] Active: 1 | Degraded: 1 | Completed: 322/5554 | Queued: 5238
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop:  99.9s] Active: 1 | Degraded: 1 | Completed: 324/5554 | Queued: 5237
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 100.0s] Active: 1 | Degraded: 1 | Completed: 325/5554 | Queued: 5236
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 100.1s] Active: 1 | Degraded: 1 | Completed: 325/5554 | Queued: 5235
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 100.2s] Active: 1 | Degraded: 1 | Completed: 326/5554 | Queued: 5234
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 100.5s] Active: 1 | Degraded: 1 | Completed: 328/5554 | Queued: 5233
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 100.6s] Active: 1 | Degraded: 1 | Completed: 328/5554 | Queued: 5232
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 100.7s] Active: 1 | Degraded: 1 | Completed: 329/5554 | Queued: 5231
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 101.7s] Active: 0 | Degraded: 1 | Completed: 331/5554 | Queued: 5231
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 101.8s] Active: 0 | Degraded: 1 | Completed: 331/5554 | Queued: 5230
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 101.9s] Active: 0 | Degraded: 1 | Completed: 332/5554 | Queued: 5229
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 102.0s] Active: 0 | Degraded: 1 | Completed: 333/5554 | Queued: 5228
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 102.1s] Active: 0 | Degraded: 1 | Completed: 334/5554 | Queued: 5227
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 102.3s] Active: 0 | Degraded: 1 | Completed: 336/5554 | Queued: 5226
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 102.4s] Active: 0 | Degraded: 1 | Completed: 336/5554 | Queued: 5225
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 102.5s] Active: 0 | Degraded: 1 | Completed: 337/5554 | Queued: 5224
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 102.7s] Active: 0 | Degraded: 1 | Completed: 338/5554 | Queued: 5223
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 102.9s] Active: 0 | Degraded: 1 | Completed: 339/5554 | Queued: 5222
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 103.1s] Active: 0 | Degraded: 1 | Completed: 341/5554 | Queued: 5220
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 103.4s] Active: 0 | Degraded: 1 | Completed: 341/5554 | Queued: 5220
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 103.6s] Active: 0 | Degraded: 1 | Completed: 342/5554 | Queued: 5219
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 103.7s] Active: 0 | Degraded: 1 | Completed: 343/5554 | Queued: 5218   TDMScheduler: Node '5B:7D:58:75:8B:25' failed link establishment within 50000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792935827]: Device '5B:7D:58:75:8B:25' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 103.8s] Active: 1 | Degraded: 1 | Completed: 344/5554 | Queued: 5217
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 103.9s] Active: 1 | Degraded: 1 | Completed: 345/5554 | Queued: 5216
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 104.1s] Active: 1 | Degraded: 1 | Completed: 347/5554 | Queued: 5215
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 104.2s] Active: 1 | Degraded: 1 | Completed: 347/5554 | Queued: 5214
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 104.3s] Active: 1 | Degraded: 1 | Completed: 348/5554 | Queued: 5213
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 104.4s] Active: 1 | Degraded: 1 | Completed: 349/5554 | Queued: 5212
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 104.6s] Active: 1 | Degraded: 1 | Completed: 351/5554 | Queued: 5211
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 104.7s] Active: 1 | Degraded: 1 | Completed: 351/5554 | Queued: 5210
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 104.8s] Active: 1 | Degraded: 1 | Completed: 352/5554 | Queued: 5209
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 104.9s] Active: 1 | Degraded: 1 | Completed: 353/5554 | Queued: 5208
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 105.0s] Active: 1 | Degraded: 1 | Completed: 354/5554 | Queued: 5207
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 105.1s] Active: 1 | Degraded: 1 | Completed: 355/5554 | Queued: 5206
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 105.2s] Active: 1 | Degraded: 1 | Completed: 356/5554 | Queued: 5205
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 105.4s] Active: 1 | Degraded: 1 | Completed: 358/5554 | Queued: 5203
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+    [TDM Loop: 105.5s] Active: 1 | Degraded: 1 | Completed: 359/5554 | Queued: 5203
+[DEBUG BLEAK] Scanned characteristics for 50:F0:C1:96:A2:D6:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['write', 'read']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 135): Nordic UART RX
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\College materials\Sem5\BTP_v2\BT_MUX\server\src\prod_demo.py", line 78, in run_physical_viva_demonstration
+    execution_metrics = await execute_tdm_loop(
+                        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\College materials\Sem5\BTP_v2\BT_MUX\server\src\demo_runner.py", line 50, in execute_tdm_loop
+    await asyncio.sleep(LOOP_WAIT_STEP)
+  File "C:\Program Files\Python312\Lib\asyncio\tasks.py", line 665, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\College materials\Sem5\BTP_v2\BT_MUX\server\src\prod_demo.py", line 99, in <module>
+    ok = asyncio.run(run_physical_viva_demonstration())
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+^C

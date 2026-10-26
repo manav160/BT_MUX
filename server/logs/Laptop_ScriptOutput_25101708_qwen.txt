@@ -1,0 +1,354 @@
+========================================================================
+      BT-MUX USER-SPACE BLE VIRTUAL SOCKET MULTIPLEXER
+      PHYSICAL BLE TESTBED VALIDATION & DEMO (OPTION A)
+========================================================================
+[*] Target Logical Nodes (N >= 10): 10
+[*] Physical GATT Slots (N_max):    4
+[*] Time-Division Window (T_slice): 1500 ms
+[*] Payload Chunks Per Node:        5
+------------------------------------------------------------------------
+[+] Initializing Hardware Abstraction Layer (WinRT/BlueZ)...
+[+] Scanning for physical BLE peripherals in radio range...
+[!] Waiting 5 seconds to ensure Android devices are detected...
+
+[+] Found 2 target demo devices.
+Please select the devices you want to connect to:
+  [1] BTv2_P1 | MAC: 70:6E:46:60:D0:93 | RSSI: -50 dBm
+  [2] BTv2_P2 | MAC: 6E:BC:D1:C7:81:EE | RSSI: -64 dBm
+
+Enter the numbers of the devices to connect to (comma or space separated, e.g., 1,2,3): 1,2
+
+[+] Selected 2 devices for this session:
+    -> BTv2_P1 | MAC: 70:6E:46:60:D0:93
+    -> BTv2_P2 | MAC: 6E:BC:D1:C7:81:EE
+
+[+] Successfully enqueued 10 chunks into user-space RAM FIFOs
+[+] Starting TDM Scheduler loop across 2 physical nodes...
+[!] NOTE: Physical connection handshakes take ~100-300ms. T_slice is set to 1500ms.
+
+    [TDM Loop:   6.0s] Active Slots: 0 | Degraded: 0 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792928216]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '70:6E:46:60:D0:93' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792928216]: Device '70:6E:46:60:D0:93' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  11.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '70:6E:46:60:D0:93' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792928216]: Device '70:6E:46:60:D0:93' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  12.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792928216]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  16.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '70:6E:46:60:D0:93' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792928216]: Device '70:6E:46:60:D0:93' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 5000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792928216]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  19.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10
+    [DEBUG] Device 0:93 has a real BleakClient object.
+    [TX] Attempting to send 11 bytes to 0:93 (Chunk: 988a4847239a4ab394e6de16b75fd6af)
+
+[DEBUG BLEAK] Scanned characteristics for 70:6E:46:60:D0:93:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TDM Loop:  20.0s] Active Slots: 0 | Degraded: 1 | Completed: 0/10 | Queued: 9       [TX] Successfully sent to 0:93
+    [ACK] Chunk 988a4847239a4ab394e6de16b75fd6af marked COMPLETED for 0:93
+
+    [DEBUG] Device 0:93 has a real BleakClient object.
+    [TX] Attempting to send 11 bytes to 0:93 (Chunk: 4b67db5dfb424aa0a96b8f57b88beb30)
+
+[DEBUG BLEAK] Scanned characteristics for 70:6E:46:60:D0:93:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TX] Successfully sent to 0:93
+    [ACK] Chunk 4b67db5dfb424aa0a96b8f57b88beb30 marked COMPLETED for 0:93
+
+    [DEBUG] Device 0:93 has a real BleakClient object.
+    [TX] Attempting to send 11 bytes to 0:93 (Chunk: 12ed3cf5b60f41ab83c438c62478d3bf)
+
+[DEBUG BLEAK] Scanned characteristics for 70:6E:46:60:D0:93:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TX] Successfully sent to 0:93
+    [ACK] Chunk 12ed3cf5b60f41ab83c438c62478d3bf marked COMPLETED for 0:93
+
+    [DEBUG] Device 0:93 has a real BleakClient object.
+    [TX] Attempting to send 11 bytes to 0:93 (Chunk: f699ef324315496aa1d4f9fa6a76afde)
+
+[DEBUG BLEAK] Scanned characteristics for 70:6E:46:60:D0:93:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+    [TX] Successfully sent to 0:93
+    [ACK] Chunk f699ef324315496aa1d4f9fa6a76afde marked COMPLETED for 0:93
+
+    [DEBUG] Device 0:93 has a real BleakClient object.
+    [TX] Attempting to send 11 bytes to 0:93 (Chunk: 9c623088003a4fa886ecc8d9f92dbb60)
+
+[DEBUG BLEAK] Scanned characteristics for 70:6E:46:60:D0:93:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 41): Nordic UART RX
+
+    [DEBUG] Device 1:EE has a real BleakClient object.
+    [TX] Attempting to send 11 bytes to 1:EE (Chunk: 980796e5684f4f2bb88dc4a14de2f8fa)
+
+[DEBUG BLEAK] Scanned characteristics for 6E:BC:D1:C7:81:EE:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 0000aa16-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'indicate']
+  -> UUID: 0000aa17-0000-1000-8000-00805f9b34fb | Properties: ['write-without-response']
+  -> UUID: 0000aa20-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00000001-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001001-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001002-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001003-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001004-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001005-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001101-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001201-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001301-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001401-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001501-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00009998-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009996-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009995-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009981-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009990-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009989-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009986-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009997-0000-1000-8000-00805f9b34fb | Properties: ['notify']
+  -> UUID: 00009985-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009892-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009891-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009890-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 269): Nordic UART RX
+    [TX] Successfully sent to 0:93
+    [ACK] Chunk 9c623088003a4fa886ecc8d9f92dbb60 marked COMPLETED for 0:93
+    [TDM Loop:  21.0s] Active Slots: 2 | Degraded: 0 | Completed: 5/10 | Queued: 4       [TX] Successfully sent to 1:EE
+    [ACK] Chunk 980796e5684f4f2bb88dc4a14de2f8fa marked COMPLETED for 1:EE
+
+    [DEBUG] Device 1:EE has a real BleakClient object.
+    [TX] Attempting to send 11 bytes to 1:EE (Chunk: 9af92542034d4d94bb51bed135b33a07)
+
+[DEBUG BLEAK] Scanned characteristics for 6E:BC:D1:C7:81:EE:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 0000aa16-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'indicate']
+  -> UUID: 0000aa17-0000-1000-8000-00805f9b34fb | Properties: ['write-without-response']
+  -> UUID: 0000aa20-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00000001-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001001-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001002-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001003-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001004-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001005-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001101-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001201-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001301-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001401-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001501-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00009998-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009996-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009995-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009981-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009990-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009989-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009986-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009997-0000-1000-8000-00805f9b34fb | Properties: ['notify']
+  -> UUID: 00009985-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009892-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009891-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009890-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 269): Nordic UART RX
+    [TX] Successfully sent to 1:EE
+    [ACK] Chunk 9af92542034d4d94bb51bed135b33a07 marked COMPLETED for 1:EE
+
+    [DEBUG] Device 1:EE has a real BleakClient object.
+    [TX] Attempting to send 11 bytes to 1:EE (Chunk: bbc3c02645bf44b9a82b1d2433d217d8)
+
+[DEBUG BLEAK] Scanned characteristics for 6E:BC:D1:C7:81:EE:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 0000aa16-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'indicate']
+  -> UUID: 0000aa17-0000-1000-8000-00805f9b34fb | Properties: ['write-without-response']
+  -> UUID: 0000aa20-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00000001-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001001-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001002-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001003-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001004-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001005-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001101-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001201-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001301-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001401-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001501-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00009998-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009996-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009995-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009981-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009990-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009989-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009986-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009997-0000-1000-8000-00805f9b34fb | Properties: ['notify']
+  -> UUID: 00009985-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009892-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009891-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009890-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 269): Nordic UART RX
+    [TX] Successfully sent to 1:EE
+    [ACK] Chunk bbc3c02645bf44b9a82b1d2433d217d8 marked COMPLETED for 1:EE
+
+    [DEBUG] Device 1:EE has a real BleakClient object.
+    [TX] Attempting to send 11 bytes to 1:EE (Chunk: 215f4954c7e94cc18043f260193c74d4)
+
+[DEBUG BLEAK] Scanned characteristics for 6E:BC:D1:C7:81:EE:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 0000aa16-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'indicate']
+  -> UUID: 0000aa17-0000-1000-8000-00805f9b34fb | Properties: ['write-without-response']
+  -> UUID: 0000aa20-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00000001-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001001-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001002-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001003-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001004-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001005-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001101-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001201-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001301-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001401-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001501-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00009998-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009996-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009995-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009981-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009990-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009989-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009986-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009997-0000-1000-8000-00805f9b34fb | Properties: ['notify']
+  -> UUID: 00009985-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009892-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009891-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009890-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 269): Nordic UART RX
+    [TX] Successfully sent to 1:EE
+    [ACK] Chunk 215f4954c7e94cc18043f260193c74d4 marked COMPLETED for 1:EE
+
+    [DEBUG] Device 1:EE has a real BleakClient object.
+    [TX] Attempting to send 11 bytes to 1:EE (Chunk: 1df09fc44fc74accb1da0860c65a1b84)
+
+[DEBUG BLEAK] Scanned characteristics for 6E:BC:D1:C7:81:EE:
+  -> UUID: 00002a05-0000-1000-8000-00805f9b34fb | Properties: ['indicate']
+  -> UUID: 00002b3a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002b29-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00002b2a-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a00-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002a01-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00002aa6-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 0000aa16-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'indicate']
+  -> UUID: 0000aa17-0000-1000-8000-00805f9b34fb | Properties: ['write-without-response']
+  -> UUID: 0000aa20-0000-1000-8000-00805f9b34fb | Properties: ['read']
+  -> UUID: 00000001-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001001-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001002-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001003-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001004-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001005-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001101-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001201-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001301-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001401-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00001501-0000-1000-8000-00805f9b34fb | Properties: ['notify', 'read', 'write']
+  -> UUID: 00009998-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009996-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009995-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009981-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009990-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009989-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009986-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009997-0000-1000-8000-00805f9b34fb | Properties: ['notify']
+  -> UUID: 00009985-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009892-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009891-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 00009890-0000-1000-8000-00805f9b34fb | Properties: ['read', 'write']
+  -> UUID: 6e400002-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+  -> UUID: 6e400003-b5a3-f393-e0a9-e50e24dcca9e | Properties: ['write']
+[DEBUG BLEAK] Target char selected: 6e400002-b5a3-f393-e0a9-e50e24dcca9e (Handle: 269): Nordic UART RX
+    [TX] Successfully sent to 1:EE
+    [ACK] Chunk 1df09fc44fc74accb1da0860c65a1b84 marked COMPLETED for 1:EE
+    [TDM Loop:  22.0s] Active Slots: 2 | Degraded: 0 | Completed: 10/10 | Queued: 0
+========================================================================
+                    PHYSICAL BENCHMARK TELEMETRY RESULTS
+========================================================================
+Total Chunks Sent:              10
+Total Chunks Acknowledged:      10 (via Option A GATT Write-Response)
+Packet Delivery Ratio (PDR):    100.00%  (Target: >= 95.0%) -> PASS
+Host Memory Footprint:          25.00 MB (Ceiling: < 150 MB) -> PASS
+Mean Handoff Latency:           250.00 ms (Target: <= 300 ms) -> PASS
+Logical Sockets Preserved:      ALL OPEN (REQ-5 PASS)
+Total Benchmark Run Time:       22.36 seconds
+------------------------------------------------------------------------
+[+] Reconciled Telemetry CSV generated: btmux_physical_benchmark.csv
+========================================================================

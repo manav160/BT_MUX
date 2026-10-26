@@ -41,6 +41,8 @@ class SessionManager:
         self._transport_send_fn: Optional[TransportSendCallback] = transport_send_fn
         # Shared dedup cache across all streams in this session
         self.dedup_cache: DedupCache = dedup_cache or DedupCache()
+        # Persistent counter for total completed chunks (never decrements)
+        self.total_completed_chunks: int = 0
 
         # Logical sockets mapped by device_id
         self.sockets: Dict[str, VirtualSocket] = {}
@@ -167,7 +169,10 @@ class SessionManager:
         """Notify buffer of remote ACK confirmation for a dispatched chunk."""
         buf = self.buffers.get(device_id)
         if buf:
-            return await buf.handle_ack(chunk_id)
+            success = await buf.handle_ack(chunk_id)
+            if success:
+                self.total_completed_chunks += 1
+            return success
         return False
 
     async def on_chunk_nack_or_timeout(self, device_id: str, chunk_id: str) -> bool:
@@ -227,10 +232,10 @@ class SessionManager:
                         await buf.handle_nack_or_timeout(chunk_to_send.chunk_id)
                 elif not chunk_to_send:
                     # If no chunks in buffer, yield briefly before rechecking
-                    await asyncio.sleep(0.005)
+                    await asyncio.sleep(0.015)
 
                 # Yield cooperatively
-                await asyncio.sleep(0.0005)
+                await asyncio.sleep(0.0015)
 
         except asyncio.CancelledError:
             logger.debug("Flush pump cancelled for device '%s' (normal slot transition)", device_id)

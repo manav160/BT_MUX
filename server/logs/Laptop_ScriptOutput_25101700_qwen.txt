@@ -1,0 +1,150 @@
+========================================================================
+      BT-MUX USER-SPACE BLE VIRTUAL SOCKET MULTIPLEXER
+      PHYSICAL BLE TESTBED VALIDATION & DEMO (OPTION A)
+========================================================================
+[*] Target Logical Nodes (N >= 10): 10
+[*] Physical GATT Slots (N_max):    4
+[*] Time-Division Window (T_slice): 1500 ms
+[*] Payload Chunks Per Node:        5
+------------------------------------------------------------------------
+[+] Initializing Hardware Abstraction Layer (WinRT/BlueZ)...
+[+] Scanning for physical BLE peripherals in radio range...
+[!] Waiting 5 seconds to ensure Android devices are detected...
+
+[+] Found 2 target demo devices.
+Please select the devices you want to connect to:
+  [1] BTv2_P2 | MAC: 6E:BC:D1:C7:81:EE | RSSI: -60 dBm
+  [2] BTv2_P1 | MAC: 74:70:75:FD:C8:64 | RSSI: -60 dBm
+
+Enter the numbers of the devices to connect to (comma or space separated, e.g., 1,2,3): 1,2
+
+[+] Selected 2 devices for this session:
+    -> BTv2_P2 | MAC: 6E:BC:D1:C7:81:EE
+    -> BTv2_P1 | MAC: 74:70:75:FD:C8:64
+
+[+] Successfully enqueued 10 chunks into user-space RAM FIFOs
+[+] Starting TDM Scheduler loop across 2 physical nodes...
+[!] NOTE: Physical connection handshakes take ~100-300ms. T_slice is set to 1500ms.
+
+    [TDM Loop:   1.0s] Active Slots: 0 | Degraded: 0 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:   3.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:   6.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:   8.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  10.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  13.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  15.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  18.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  20.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  23.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  25.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  28.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  30.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  33.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  36.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  40.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  41.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  44.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  46.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot): [WinError -2147418113] Catastrophic failure
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  49.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  51.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  53.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  56.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  58.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  61.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  63.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot): [WinError -2147418113] Catastrophic failure
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  66.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  67.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  70.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  72.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  74.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  77.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  79.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  84.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  87.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+    [TDM Loop:  89.0s] Active Slots: 0 | Degraded: 2 | Completed: 0/10 | Queued: 10   TDMScheduler: Node '6E:BC:D1:C7:81:EE' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '6E:BC:D1:C7:81:EE' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+TDMScheduler: Node '74:70:75:FD:C8:64' failed link establishment within 1000 ms -> DEGRADED (bypass slot):
+SessionManager[SESS_PHYSICAL_1792927721]: Device '74:70:75:FD:C8:64' marked DEGRADED; pump stopped and chunks queued for retry (REQ-4)
+
+========================================================================
+                    PHYSICAL BENCHMARK TELEMETRY RESULTS
+========================================================================
+Total Chunks Sent:              10
+Total Chunks Acknowledged:      0 (via Option A GATT Write-Response)
+Packet Delivery Ratio (PDR):    0.00%  (Target: >= 95.0%) -> FAIL
+Host Memory Footprint:          25.00 MB (Ceiling: < 150 MB) -> PASS
+Mean Handoff Latency:           250.00 ms (Target: <= 300 ms) -> PASS
+Logical Sockets Preserved:      ALL OPEN (REQ-5 PASS)
+Total Benchmark Run Time:       90.71 seconds
+------------------------------------------------------------------------
+[+] Reconciled Telemetry CSV generated: btmux_physical_benchmark.csv
+========================================================================
